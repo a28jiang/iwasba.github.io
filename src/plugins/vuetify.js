@@ -1,9 +1,7 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib";
-import vuePositionSticky from "vue-position-sticky";
 
 Vue.use(Vuetify);
-Vue.use(vuePositionSticky);
 
 const vuetify = new Vuetify({
   theme: {

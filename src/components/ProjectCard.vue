@@ -1,29 +1,27 @@
 <template>
-  <v-card flat class="cardStyle" max-width="500px">
+  <v-card flat class="cardStyle" max-width="600px">
     <v-img
       class="cardImg"
-      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+      :src="require(`@/assets/thumbnail/${image}.png`)"
       height="350px"
     ></v-img>
     <div class="content">
       <v-row>
         <v-col class="centerV" cols="1">
-          <div class="devBadge" />
-          <div class="devBadge" />
+          <div v-if="type.includes('dev')" class="devBadge" />
+          <div v-if="type.includes('design')" class="designBadge" />
+          <div v-if="type.includes('art')" class="artBadge" />
         </v-col>
         <v-col cols="5">
           <v-card-title>
-            Top western road trips
+            {{ title }}
           </v-card-title>
           <v-card-subtitle>
-            1,000 miles of wonder
+            {{ stack.join(" ") }}
           </v-card-subtitle>
         </v-col>
         <v-col cols="6">
-          <v-card-text
-            >With a simple conditional, you can easily add supplementary text
-            that is hidden until opened.</v-card-text
-          >
+          <v-card-text>{{ description }}</v-card-text>
         </v-col>
       </v-row>
     </div>
@@ -35,14 +33,17 @@ export default {
   name: "ProjectCard",
   props: {
     title: String,
-    stack: String,
+    stack: Array,
     description: String,
     image: String,
     link: String,
     type: Array
   },
 
-  data: () => ({})
+  data: () => ({}),
+  mounted: function() {
+    console.log(this.title);
+  }
 };
 </script>
 
@@ -89,7 +90,7 @@ export default {
   margin: 8px 8px 12px 16px;
   border-radius: 50%;
 }
-.designArt {
+.designBadge {
   height: 1vw;
   width: 1vw;
   background-color: #eba0a0;

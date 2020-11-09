@@ -1,15 +1,15 @@
 <template>
-  <v-app-bar app flat color="rgba(0,0,0,0)" hide-on-scroll>
+  <v-app-bar class="navBar" app flat color="rgba(0,0,0,0)" hide-on-scroll>
     <v-row>
       <v-col cols="1" />
       <v-col cols="1">
-        <v-img max-height="48" max-width="48" src="../assets/logo.png" />
+        <v-img class="marginTop" max-width="48" src="../assets/logo.png" />
+      </v-col>
+      <v-col cols="3">
+        <btn text class="routerLink">Projects</btn>
       </v-col>
       <v-col cols="2">
-        <v-btn text class="routerLink">Projects</v-btn>
-      </v-col>
-      <v-col cols="2">
-        <v-btn text class="routerLink">Work</v-btn>
+        <btn text class="routerLink">Work</btn>
       </v-col>
       <v-spacer />
     </v-row>
@@ -26,15 +26,10 @@ export default {
 </script>
 
 <style scoped>
-.toolbar {
-  box-shadow: none;
-  background-color: none;
+.navBar {
+  padding: 42px;
 }
-.padLeft {
-  padding-left: 64px;
-}
-.customHeader {
-  box-shadow: none;
-  background-color: none;
+.marginTop {
+  margin-top: -6px;
 }
 </style>
