@@ -11,6 +11,7 @@ import QRPay from "../views/projects/QRPay.vue";
 import Rabbit from "../views/projects/Rabbit.vue";
 import Vibeify from "../views/projects/Vibeify.vue";
 import Watchlist from "../views/projects/Watchlist.vue";
+import About from "../views/About.vue";
 
 Vue.use(VueRouter);
 
@@ -74,6 +75,11 @@ const routes = [
     path: "/Vibeify",
     name: "vibeify",
     component: Vibeify
+  },
+  {
+    path: "/About",
+    name: "about",
+    component: About
   }
 ];
 
