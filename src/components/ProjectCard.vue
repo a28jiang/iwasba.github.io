@@ -1,8 +1,9 @@
 <template>
   <v-card flat class="cardStyle" max-width="600px">
     <v-img
+      @click="$router.push(name)"
       class="cardImg"
-      :src="require(`@/assets/thumbnail/${image}.png`)"
+      :src="require(`@/assets/thumbnail/${name}.png`)"
       height="350px"
     ></v-img>
     <div class="content">
@@ -35,8 +36,7 @@ export default {
     title: String,
     stack: Array,
     description: String,
-    image: String,
-    link: String,
+    name: String,
     type: Array
   },
 
@@ -50,6 +50,11 @@ export default {
 <style>
 .cardImg {
   border-radius: 12px !important;
+}
+
+.cardImg:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .v-card__title {
