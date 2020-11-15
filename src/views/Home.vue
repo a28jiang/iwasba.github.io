@@ -84,6 +84,7 @@ export default {
     };
   },
   mounted() {
+    window.scrollTo(0, 0);
     if (this.activeDev) this.addItems("dev");
     if (this.activeDesign) this.addItems("design");
     if (this.activeArt) this.addItems("art");
@@ -125,6 +126,10 @@ export default {
 </script>
 
 <style scoped>
+.accent {
+  color: #6c86a1;
+  margin-left: 0.3em;
+}
 .design1 {
   display: flex;
   justify-content: flex-end;

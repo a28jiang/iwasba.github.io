@@ -8,17 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@mdi/js": "^5.8.55",
     "core-js": "^3.6.5",
-    "intersection-observer": "^0.11.0",
     "vue": "^2.6.11",
-    "vue-animate-scroll": "^0.1.5",
-    "vue-kinesis": "^1.1.5",
-    "vue-parallaxy": "^1.1.1",
-    "vue-position-sticky": "^0.2.1",
-    "vue-router": "^3.2.0",
-    "vue-scrollama": "^1.1.9",
-    "vue-sticky-directive": "0.0.10",
-    "vuetify": "^2.2.11"
+    "vue-router": "^3.1.6",
+    "vuetify": "^2.3.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

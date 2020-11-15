@@ -3,7 +3,12 @@
     <v-row class="navContent">
       <v-col cols="1" />
       <v-col cols="1">
-        <v-img class="marginTop" max-width="48" src="../assets/logo.png" />
+        <img
+          v-on:click="$router.push('/')"
+          class="mt-n2 clickable"
+          :style="{ maxWidth: 48 }"
+          src="../assets/logo.png"
+        />
       </v-col>
       <v-col cols="3">
         <button text class="routerLink">Resume</button>
