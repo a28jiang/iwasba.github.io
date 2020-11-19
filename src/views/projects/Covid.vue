@@ -8,7 +8,7 @@
       title="Covid-19 Tracker"
       :designVar="1"
     />
-    <Inspiration name="Covid" :designVar="2" :imgSize="800">
+    <Inspiration name="Covid" :designVar="2" :imgSize="700">
       <template v-slot:description>
         <p class="mt-6">
           With COVID-19 being a major issue affecting the entire world, I

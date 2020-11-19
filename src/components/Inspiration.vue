@@ -1,7 +1,12 @@
 <template>
-  <v-row class="pa-12 pt-6">
+  <v-row class="pa-12">
     <v-col class="hidden-sm-and-down" cols="1" />
-    <v-col class="centered" sm="12" md="5">
+    <v-col
+      :class="{ fillWidth: $vuetify.breakpoint.smAndDown }"
+      class="centered"
+      sm="12"
+      md="5"
+    >
       <div class="leftAlign">
         <h2>Inspiration</h2>
 
@@ -61,6 +66,9 @@ export default {
 </script>
 
 <style scoped>
+.fillWidth {
+  min-width: 100%;
+}
 .imagePanel {
   position: relative;
   min-height: 300px;
@@ -71,7 +79,7 @@ export default {
 }
 .responsiveImage {
   position: absolute;
-  width: 70vw;
+  width: 80vw;
   top: 20px;
 }
 
