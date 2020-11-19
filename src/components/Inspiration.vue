@@ -15,31 +15,31 @@
     </v-col>
     <v-col sm="12" md="5" class="imagePanel">
       <v-img
-        v-if="designVar == 1"
+        v-if="designVar.includes(1)"
         class="hidden-sm-and-down design1a"
         max-width="150"
         :src="require(`@/assets/ellipse.svg`)"
       />
       <v-img
-        v-if="designVar == 1"
+        v-if="designVar.includes(1)"
         class="hidden-sm-and-down design1b"
         max-width="80"
         :src="require(`@/assets/dots2.svg`)"
       />
       <v-img
-        v-if="designVar == 2"
+        v-if="designVar.includes(2)"
         class="hidden-sm-and-down design2a"
         max-width="100"
         :src="require(`@/assets/ellipse.svg`)"
       />
       <v-img
-        v-if="designVar == 2"
+        v-if="designVar.includes(2)"
         class="hidden-sm-and-down design2b"
         max-width="80"
         :src="require(`@/assets/dots.svg`)"
       />
       <v-img
-        v-if="designVar == 2"
+        v-if="designVar.includes(3)"
         class="hidden-sm-and-down design3"
         max-width="80"
         :src="require(`@/assets/dots2.svg`)"
@@ -59,7 +59,7 @@ export default {
   name: "Inspiration",
   props: {
     name: String,
-    designVar: Number,
+    designVar: Array,
     imgSize: Number
   }
 };

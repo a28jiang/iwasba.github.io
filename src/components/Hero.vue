@@ -34,25 +34,25 @@
     </v-col>
     <v-col cols="1" class="hidden-sm-and-down" :style="{ position: relative }">
       <v-img
-        v-if="designVar == 1"
+        v-if="designVar.includes(1)"
         class="design1"
         max-width="130"
         :src="require(`@/assets/design1.svg`)"
       />
       <v-img
-        v-if="designVar == 2"
+        v-if="designVar.includes(2)"
         class="design2"
         max-width="130"
         :src="require(`@/assets/design1.svg`)"
       />
       <v-img
-        v-if="designVar == 3"
+        v-if="designVar.includes(3)"
         class="design3"
         max-width="80"
         :src="require(`@/assets/dots.svg`)"
       />
       <v-img
-        v-if="designVar == 3"
+        v-if="designVar.includes(3)"
         class="design4"
         max-width="200"
         :src="require(`@/assets/ellipse.svg`)"
@@ -72,7 +72,7 @@ export default {
     product: String,
 
     heroSize: Number,
-    designVar: Number
+    designVar: Array
   }
 };
 </script>

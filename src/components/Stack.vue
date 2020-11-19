@@ -11,7 +11,7 @@
       <v-row>
         <v-col class="centered" v-for="tool in stack" :key="tool">
           <img
-            :style="imgSize ? { height: imgSize } : { height: '20vw' }"
+            :style="imgSize ? { height: imgSize } : { height: '10vw' }"
             :src="require(`@/assets/icons/${tool}.png`)"
           />
         </v-col>
