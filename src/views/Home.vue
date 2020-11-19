@@ -22,7 +22,7 @@
         <v-col>
           <h1>
             <span>aaron</span>
-            <span class="accent">jiang.</span>
+            <span class="titleAccent">jiang.</span>
           </h1>
           <h3>Product <b>designer</b> and <b>developer</b></h3>
         </v-col>
@@ -56,7 +56,13 @@
 
       <v-row>
         <transition-group tag="div" name="fade" class="row">
-          <v-col class="centered" v-for="item in items" :key="item.key">
+          <v-col
+            sm="12"
+            md="6"
+            class="centered"
+            v-for="item in items"
+            :key="item.key"
+          >
             <ProjectCard v-bind="item" :key="item.key" />
           </v-col>
         </transition-group>
@@ -116,9 +122,14 @@ export default {
     },
     removeItems: function(type) {
       for (var i = this.items.length - 1; i >= 0; i--) {
-        if (this.items[i].type.includes(type)) {
-          this.items.splice(i, 1);
-        }
+        const types = this.items[i].type;
+
+        const devOn = types.includes("dev") && this.activeDev;
+        const designOn = types.includes("design") && this.activeDesign;
+        const artOn = types.includes("art") && this.activeArt;
+
+        const isOn = devOn || designOn || artOn;
+        if (!isOn) this.items.splice(i, 1);
       }
     }
   }
@@ -126,7 +137,7 @@ export default {
 </script>
 
 <style scoped>
-.accent {
+.titleAccent {
   color: #6c86a1;
   margin-left: 0.3em;
 }

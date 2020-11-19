@@ -1,43 +1,13 @@
 <template>
   <div class="background">
-    <v-row class="px-12 padTop">
-      <v-col class="centered" sm="12" md="7">
-        <v-img
-          class="hero"
-          :src="require(`@/assets/${$options.name}/hero.png`)"
-          max-width="600"
-        />
-      </v-col>
-      <v-col
-        class="left px-6"
-        sm="12"
-        md="4"
-        :order="$vuetify.breakpoint.smAndDown ? 'first' : ''"
-      >
-        <div class="leftAlign">
-          <v-row><h2>Rabbit</h2></v-row>
-          <v-row
-            ><h3>Data Visualization</h3>
-            <v-icon class="clickable icon">
-              mdi-github
-            </v-icon></v-row
-          >
-          <v-row class="clickable mt-12 hidden-sm-and-down">
-            <h4>Try it out</h4>
-            <v-icon large class="icon">
-              mdi-exit-to-app
-            </v-icon>
-          </v-row>
-        </div>
-      </v-col>
-      <v-col
-        cols="1"
-        class="hidden-sm-and-down"
-        :style="{ position: relative }"
-      >
-        <v-img class="design1" max-width="130" src="../../assets/design1.svg" />
-      </v-col>
-    </v-row>
+    <Hero
+      :heroSize="550"
+      github="a"
+      product="a"
+      name="Rabbit"
+      title="Rabbit"
+      :designVar="2"
+    />
 
     <v-row class="inspo px-12 pb-6">
       <v-col class="hidden-sm-and-down" cols="2" />
@@ -126,8 +96,10 @@
 </template>
 
 <script>
+import Hero from "@/components/Hero.vue";
 export default {
   name: "Rabbit",
+  components: { Hero },
   data: function() {
     return {
       stack: ["chartjs", "covid19", "vue"]

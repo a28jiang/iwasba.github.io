@@ -1,10 +1,9 @@
 <template>
-  <v-card flat class="cardStyle" max-width="600px">
+  <v-card flat class="cardStyle" min-width="300">
     <v-img
       @click="$router.push(name)"
       class="cardImg"
       :src="require(`@/assets/thumbnail/${name}.png`)"
-      height="350px"
     ></v-img>
     <div class="content">
       <v-row>
@@ -49,6 +48,7 @@ export default {
 
 <style>
 .cardImg {
+  width: 80vw;
   border-radius: 12px !important;
 }
 

@@ -1,72 +1,19 @@
 <template>
-  <div class="background">
-    <v-row class="px-12 padTop">
-      <v-col class="centered" sm="12" md="7">
-        <v-img
-          class="hero"
-          :src="require(`@/assets/covid/hero.png`)"
-          max-width="800"
-        />
-      </v-col>
-      <v-col
-        class="left px-6"
-        sm="12"
-        md="4"
-        :order="$vuetify.breakpoint.smAndDown ? 'first' : ''"
-      >
-        <div class="leftAlign">
-          <v-row><h2>Covid-19 Tracker</h2></v-row>
-          <v-row
-            ><h3>Data Visualization</h3>
-            <v-icon class="clickable icon">
-              mdi-github
-            </v-icon></v-row
-          >
-          <v-row class="clickable mt-12 hidden-sm-and-down">
-            <h4>Try it out</h4>
-            <v-icon large class="icon">
-              mdi-exit-to-app
-            </v-icon>
-          </v-row>
-        </div>
-      </v-col>
-      <v-col
-        cols="1"
-        class="hidden-sm-and-down"
-        :style="{ position: relative }"
-      >
-        <v-img class="design1" max-width="130" src="../../assets/design1.svg" />
-      </v-col>
-    </v-row>
-
-    <v-row class="inspo px-12 pb-6">
-      <v-col class="hidden-sm-and-down" cols="2" />
-      <v-col>
-        <div class="leftAlign">
-          <h2>Inspiration</h2>
-          <p class="mt-6">
-            With COVID-19 being a major issue affecting the entire world, I
-            thought it would be nice to create a web-app that friends and family
-            could use to keep track of the latest numbers.
-          </p>
-        </div>
-      </v-col>
-      <v-col class="hidden-md-and-up">
-        <v-img
-          max-width="700"
-          :src="require(`@/assets/covid/inspiration.png`)"
-        />
-      </v-col>
-      <v-col class="hidden-sm-and-down" :style="{ position: 'relative' }">
-        <v-img class="design2" max-width="150" src="../../assets/ellipse.svg" />
-        <v-img class="design3" max-width="80" src="../../assets/dots2.svg" />
-        <v-img
-          class="inspiration"
-          max-width="700"
-          :src="require(`@/assets/covid/inspiration.png`)"
-        />
-      </v-col>
-    </v-row>
+  <div>
+    <Hero
+      :heroSize="800"
+      github="a"
+      product="a"
+      name="Covid"
+      title="Covid-19 Tracker"
+      :designVar="1"
+    />
+    <Inspiration
+      name="Covid"
+      :description="inspiration"
+      :designVar="2"
+      :imgSize="800"
+    />
 
     <v-row class="stack px-12">
       <v-col class="hidden-sm-and-down" cols="2" />
@@ -100,7 +47,10 @@
         <v-img class="design4" max-width="130" src="../../assets/design1.svg" />
       </v-col>
       <v-col class="centered">
-        <v-img max-width="420" :src="require(`@/assets/covid/product.png`)" />
+        <v-img
+          max-width="420"
+          :src="require(`@/assets/${$options.name}/product.png`)"
+        />
       </v-col>
       <v-col
         class="centered"
@@ -123,10 +73,16 @@
 </template>
 
 <script>
+import Hero from "@/components/Hero.vue";
+import Inspiration from "@/components/Inspiration.vue";
+
 export default {
   name: "Covid",
+  components: { Hero, Inspiration },
   data: function() {
     return {
+      inspiration:
+        " With COVID-19 being a major issue affecting the entire world, I thought it would be nice to create a web-app that friends and family could use to keep track of the latest numbers.",
       stack: ["chartjs", "covid19", "vue"]
     };
   },
@@ -146,17 +102,6 @@ export default {
   background-color: #6c86a1;
 }
 
-.background {
-  /* padding: 0 10% 0 10%; */
-  height: 100%;
-  /* background: linear-gradient(white 60%, #6c86a1 40%); */
-}
-
-.design1 {
-  position: absolute;
-  top: 40px;
-  left: 90%;
-}
 .design2 {
   position: absolute;
   top: -70px;
