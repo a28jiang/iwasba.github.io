@@ -1,12 +1,11 @@
 <template>
-  <v-row class="pa-12">
+  <v-row class="pa-12 pt-6">
     <v-col class="hidden-sm-and-down" cols="1" />
     <v-col class="centered" sm="12" md="5">
       <div class="leftAlign">
         <h2>Inspiration</h2>
-        <p class="mt-6">
-          {{ description }}
-        </p>
+
+        <slot name="description"></slot>
       </div>
     </v-col>
     <v-col sm="12" md="5" class="imagePanel">
@@ -25,7 +24,7 @@
       <v-img
         v-if="designVar == 2"
         class="hidden-sm-and-down design2a"
-        max-width="175"
+        max-width="100"
         :src="require(`@/assets/ellipse.svg`)"
       />
       <v-img
@@ -54,7 +53,6 @@
 export default {
   name: "Inspiration",
   props: {
-    description: String,
     name: String,
     designVar: Number,
     imgSize: Number
@@ -91,18 +89,18 @@ export default {
 }
 .design2a {
   position: absolute;
-  top: 340px;
-  left: -138%;
+  top: 300px;
+  left: -112%;
+  z-index: 1;
 }
 .design2b {
   position: absolute;
-  top: 270px;
+  top: 260px;
   left: -120%;
-  z-index: 1;
 }
 .design3 {
   position: absolute;
-  top: 270px;
+  top: 260px;
   left: 25%;
   z-index: 1;
 }

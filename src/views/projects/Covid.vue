@@ -8,14 +8,29 @@
       title="Covid-19 Tracker"
       :designVar="1"
     />
-    <Inspiration
-      name="Covid"
-      :description="inspiration"
-      :designVar="2"
-      :imgSize="800"
-    />
+    <Inspiration name="Covid" :designVar="2" :imgSize="800">
+      <template v-slot:description>
+        <p class="mt-6">
+          With COVID-19 being a major issue affecting the entire world, I
+          thought it would be nice to create a web-app that friends and family
+          could use to keep track of the latest numbers.
+        </p>
+      </template>
+    </Inspiration>
 
-    <v-row class="stack px-12">
+    <Stack :stack="stack" name="Covid">
+      <template v-slot:description>
+        <p class="mt-6">
+          I used VueJS to create the frontend. Using axios, I was able to call
+          the COVID19-API which is a public api that returns COVID-19 data as
+          JSON. Using the data from the api, I then used ChartJS to render
+          graphs. This project increased my knowledge in javascript and helped
+          me discover a wonderful API.
+          <br /><br />To learn more about covid19-api, <a>click here</a>
+        </p>
+      </template>
+    </Stack>
+    <!-- <v-row class="stack px-12">
       <v-col class="hidden-sm-and-down" cols="2" />
       <v-col sm="12" md="6">
         <div class="leftAlign">
@@ -40,7 +55,7 @@
           </v-col>
         </v-row>
       </v-col>
-    </v-row>
+    </v-row> -->
 
     <v-row class="product px-12">
       <v-col class="hidden-sm-and-down" cols="2">
@@ -75,14 +90,13 @@
 <script>
 import Hero from "@/components/Hero.vue";
 import Inspiration from "@/components/Inspiration.vue";
+import Stack from "@/components/Stack.vue";
 
 export default {
   name: "Covid",
-  components: { Hero, Inspiration },
+  components: { Hero, Inspiration, Stack },
   data: function() {
     return {
-      inspiration:
-        " With COVID-19 being a major issue affecting the entire world, I thought it would be nice to create a web-app that friends and family could use to keep track of the latest numbers.",
       stack: ["chartjs", "covid19", "vue"]
     };
   },
@@ -95,11 +109,6 @@ export default {
 <style scoped>
 .padTop {
   margin-top: 60px;
-}
-.stack {
-  padding-top: 72px;
-  padding-bottom: 72px;
-  background-color: #6c86a1;
 }
 
 .design2 {

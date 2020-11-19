@@ -101,6 +101,11 @@ export default {
   align-items: center;
 }
 
+a {
+  color: white !important;
+  font-weight: 500;
+}
+
 #nav {
   padding: 30px;
 
