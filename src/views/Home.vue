@@ -1,24 +1,28 @@
 <template>
   <div class="home">
-    <div class="circleContainer">
-      <img class="semiCircle" src="../assets/ellipse.svg" />
-    </div>
+    <v-row :style="{ height: '60px' }" />
     <v-row>
-      <v-col cols="7" />
-      <v-col>
-        <v-img max-width="70" src="../assets/design2.svg" />
+      <v-col
+        cols="2"
+        class="hidden-sm-and-down"
+        :style="{ position: relative }"
+      >
+        <v-img class="design1" max-width="130" src="../assets/design1.svg" />
       </v-col>
-      <v-col cols="3" />
-    </v-row>
-    <v-row>
-      <v-col cols="1" />
-      <v-col class="design1" cols="2">
-        <v-img max-width="200" src="../assets/design1.svg" />
+
+      <v-col class="centered" md="5" sm="12">
+        <v-img
+          :max-width="$vuetify.breakpoint.smAndDown ? '60vw' : ''"
+          src="../assets/hero.png"
+        />
       </v-col>
-      <v-col class="centered" cols="4">
-        <v-img max-width="500" src="../assets/hero.png" />
-      </v-col>
-      <v-col cols="4" class="left" :style="{ paddingLeft: 0 }">
+      <v-col
+        md="4"
+        sm="12"
+        class="left"
+        :style="{ paddingLeft: 0 }"
+        :order="$vuetify.breakpoint.smAndDown ? 'first' : 'last'"
+      >
         <v-col>
           <h1>
             <span>aaron</span>
@@ -27,31 +31,45 @@
           <h3>Product <b>designer</b> and <b>developer</b></h3>
         </v-col>
       </v-col>
+      <v-col
+        cols="1"
+        class="hidden-sm-and-down"
+        :style="{ position: relative }"
+      >
+        <v-img
+          class="semiCircle"
+          max-width="300"
+          :src="require(`@/assets/ellipse.svg`)"
+        />
+      </v-col>
     </v-row>
 
     <div class="sectionPadding">
-      <v-row>
-        <v-col cols="7" />
-        <v-col class="right" cols="2">
-          <h3>Filter by:</h3>
+      <v-row
+        class="mr-6"
+        :justify="$vuetify.breakpoint.smAndDown ? 'center' : 'end'"
+      >
+        <v-spacer />
+
+        <v-col class="hidden-sm-and-down right">
+          <h3 class="mr-2">Filter by:</h3>
         </v-col>
-        <v-col class="left" cols="3">
-          <v-btn
-            @click="handleChange('dev')"
-            :class="activeDev ? 'devOn' : 'devOff'"
-            >dev</v-btn
-          >
-          <v-btn
-            @click="handleChange('design')"
-            :class="activeDesign ? 'designOn' : 'designOff'"
-            >design</v-btn
-          >
-          <v-btn
-            @click="handleChange('art')"
-            :class="activeArt ? 'artOn' : 'artOff'"
-            >art</v-btn
-          >
-        </v-col>
+
+        <v-btn
+          @click="handleChange('dev')"
+          :class="activeDev ? 'devOn' : 'devOff'"
+          >dev</v-btn
+        >
+        <v-btn
+          @click="handleChange('design')"
+          :class="activeDesign ? 'designOn' : 'designOff'"
+          >design</v-btn
+        >
+        <v-btn
+          @click="handleChange('art')"
+          :class="activeArt ? 'artOn' : 'artOff'"
+          >art</v-btn
+        >
       </v-row>
 
       <v-row>
@@ -154,8 +172,15 @@ export default {
 }
 
 .semiCircle {
-  width: 300px;
-  height: 300px;
+  position: absolute;
+  top: 0%;
+  left: 92%;
+}
+
+.design1 {
+  position: absolute;
+  top: 4%;
+  left: 8%;
 }
 </style>
 
@@ -163,23 +188,41 @@ export default {
 .home {
   overflow-x: auto;
 }
+@media all and (min-width: 750px) {
+  .v-btn {
+    height: 55px !important;
+    margin: 10px;
+    border: 5px solid;
+    border-radius: 10px;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
 
-.v-btn {
-  height: 55px !important;
-  margin: 10px;
-  border: 5px solid;
-  border-radius: 10px;
-  box-shadow: none;
-  background-color: rgba(0, 0, 0, 0) !important;
+  .v-btn__content {
+    padding: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: none;
+  }
 }
 
-.v-btn__content {
-  padding: 8px;
-  font-weight: 600;
-  font-size: 24px;
-  text-transform: none;
-}
+@media all and (max-width: 750px) {
+  .v-btn {
+    height: 45px !important;
+    margin: 10px;
+    border: 5px solid;
+    border-radius: 10px;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
 
+  .v-btn__content {
+    padding: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: none;
+  }
+}
 .dev {
   color: #6c86a1 !important;
 }
@@ -224,7 +267,7 @@ export default {
 }
 
 .sectionPadding {
-  margin: 60px;
+  margin-top: 60px;
 }
 .padLeft {
   margin: 2vw;

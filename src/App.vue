@@ -32,7 +32,7 @@ export default {
     font-weight: bold;
     color: #3f3f3f;
     margin: 16px;
-    font-size: 5vw;
+    font-size: 48px;
   }
   h2 {
     font-weight: bold;
@@ -48,16 +48,6 @@ export default {
     font-weight: 600;
     color: #6c86a1;
     font-size: 30px;
-  }
-  .routerLink {
-    font-weight: bold;
-    color: #c4c4c4;
-    font-size: 20px;
-    text-transform: none;
-  }
-  .routerLink:hover {
-    opacity: 0.5;
-    cursor: pointer;
   }
 
   .clickable:hover {
