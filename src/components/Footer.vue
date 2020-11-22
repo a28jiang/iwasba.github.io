@@ -34,6 +34,7 @@ export default {
 .footer {
   width: 100%;
   display: flex;
+  padding: 16px 0 16px 0;
 }
 
 .addPadding {

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <v-row :style="{ height: '60px' }" />
     <v-row>
       <v-col
@@ -12,7 +12,7 @@
 
       <v-col class="centered" md="5" sm="12">
         <v-img
-          :max-width="$vuetify.breakpoint.smAndDown ? '60vw' : ''"
+          :max-width="$vuetify.breakpoint.smAndDown ? '60vw' : '32vw'"
           src="../assets/hero.png"
         />
       </v-col>
@@ -21,14 +21,20 @@
         sm="12"
         class="left"
         :style="{ paddingLeft: 0 }"
-        :order="$vuetify.breakpoint.smAndDown ? 'first' : 'last'"
+        :order="$vuetify.breakpoint.smAndDown ? 'first' : ''"
       >
         <v-col>
-          <h1>
+          <h1
+            :style="$vuetify.breakpoint.smAndDown ? { fontSize: '10vw' } : ''"
+          >
             <span>aaron</span>
             <span class="titleAccent">jiang.</span>
           </h1>
-          <h3>Product <b>designer</b> and <b>developer</b></h3>
+          <h3
+            :style="$vuetify.breakpoint.smAndDown ? { fontSize: '20px' } : ''"
+          >
+            Product <b>designer</b> and <b>developer</b>
+          </h3>
         </v-col>
       </v-col>
       <v-col
@@ -44,48 +50,46 @@
       </v-col>
     </v-row>
 
-    <div class="sectionPadding">
-      <v-row
-        class="mr-6"
-        :justify="$vuetify.breakpoint.smAndDown ? 'center' : 'end'"
+    <v-row
+      class="sectionPadding "
+      :justify="$vuetify.breakpoint.smAndDown ? 'center' : 'end'"
+    >
+      <v-spacer class="hidden-sm-and-down" />
+
+      <v-col class="hidden-sm-and-down right">
+        <h3 class="">Filter by:</h3>
+      </v-col>
+
+      <v-btn
+        @click="handleChange('dev')"
+        :class="activeDev ? 'devOn' : 'devOff'"
+        >dev</v-btn
       >
-        <v-spacer />
+      <v-btn
+        @click="handleChange('design')"
+        :class="activeDesign ? 'designOn' : 'designOff'"
+        >design</v-btn
+      >
+      <v-btn
+        @click="handleChange('art')"
+        :class="activeArt ? 'artOn' : 'artOff'"
+        >art</v-btn
+      >
+    </v-row>
 
-        <v-col class="hidden-sm-and-down right">
-          <h3 class="mr-2">Filter by:</h3>
+    <v-row class="projects">
+      <transition-group tag="div" name="fade" class="row">
+        <v-col
+          sm="12"
+          md="6"
+          class="centered"
+          v-for="item in items"
+          :key="item.key"
+        >
+          <ProjectCard v-bind="item" :key="item.key" />
         </v-col>
-
-        <v-btn
-          @click="handleChange('dev')"
-          :class="activeDev ? 'devOn' : 'devOff'"
-          >dev</v-btn
-        >
-        <v-btn
-          @click="handleChange('design')"
-          :class="activeDesign ? 'designOn' : 'designOff'"
-          >design</v-btn
-        >
-        <v-btn
-          @click="handleChange('art')"
-          :class="activeArt ? 'artOn' : 'artOff'"
-          >art</v-btn
-        >
-      </v-row>
-
-      <v-row>
-        <transition-group tag="div" name="fade" class="row">
-          <v-col
-            sm="12"
-            md="6"
-            class="centered"
-            v-for="item in items"
-            :key="item.key"
-          >
-            <ProjectCard v-bind="item" :key="item.key" />
-          </v-col>
-        </transition-group>
-      </v-row>
-    </div>
+      </transition-group>
+    </v-row>
   </div>
 </template>
 
@@ -135,7 +139,8 @@ export default {
 
     addItems: function(type) {
       this.allItems.forEach(item => {
-        if (item.type.includes(type)) this.items.push(item);
+        if (item.type.includes(type) && !this.items.includes(item))
+          this.items.push(item);
       });
     },
     removeItems: function(type) {
@@ -155,6 +160,10 @@ export default {
 </script>
 
 <style scoped>
+.projects {
+  padding: 0 3% 0 3%;
+}
+
 .titleAccent {
   color: #6c86a1;
   margin-left: 0.3em;
@@ -185,9 +194,6 @@ export default {
 </style>
 
 <style>
-.home {
-  overflow-x: auto;
-}
 @media all and (min-width: 750px) {
   .v-btn {
     height: 55px !important;
@@ -208,7 +214,7 @@ export default {
 
 @media all and (max-width: 750px) {
   .v-btn {
-    height: 45px !important;
+    height: 40px !important;
     margin: 10px;
     border: 5px solid;
     border-radius: 10px;
@@ -219,7 +225,7 @@ export default {
   .v-btn__content {
     padding: 8px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: none;
   }
 }
@@ -268,9 +274,6 @@ export default {
 
 .sectionPadding {
   margin-top: 60px;
-}
-.padLeft {
-  margin: 2vw;
 }
 
 .fade-enter-active,

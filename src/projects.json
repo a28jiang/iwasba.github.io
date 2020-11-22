@@ -17,7 +17,7 @@
       "key": 2
     },
     {
-      "title": "Covid-19 Tracker",
+      "title": "Covid Tracker",
       "stack": ["VueJS", "Figma", "Covid19-API"],
       "description": "A visually striking web-app that provides key insight towards transmission rates as well as statistics such as deaths and recoveries.",
       "name": "covid",
@@ -33,7 +33,7 @@
       "key": 4
     },
     {
-      "title": "LinkedIn Scraper",
+      "title": "ScrapedIn ",
       "stack": ["VueJS", "NodeJS"],
       "description": "An application to help corporations analyze crowd sentiment and business opportunities using Linkedin commenting data.",
       "name": "linkedin",

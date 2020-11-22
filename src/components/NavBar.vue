@@ -2,38 +2,38 @@
   <v-app-bar app flat color="rgba(0,0,0,0)" hide-on-scroll>
     <v-row class="navContent">
       <v-col class="centered noPadding" cols="1">
-        <v-img
+        <img
           v-on:click="$router.push('/')"
-          class="clickable icon"
+          class="clickable"
+          :style="
+            $vuetify.breakpoint.smAndDown
+              ? { height: '25px' }
+              : { height: '45px' }
+          "
           src="../assets/logo.png"
         />
       </v-col>
-      <v-col class="centered noPadding" cols="3" sm="5">
+      <v-col class="centered noPadding" cols="3">
         <button
-          text
-          :class="
-            $vuetify.breakpoint.xsAndDown ? 'routerLinkSmall' : 'routerLink'
-          "
-          class="px-2 clickable"
+          :style="$vuetify.breakpoint.smAndDown ? { fontSize: '100%' } : ''"
+          class="routerLink px-2 clickable"
         >
           Resume
         </button>
       </v-col>
-      <v-col class="centered noPadding" cols="2" sm="5">
+      <v-col class="centered noPadding" cols="2">
         <button
           text
-          :class="
-            $vuetify.breakpoint.xsAndDown ? 'routerLinkSmall' : 'routerLink'
-          "
-          class="mx-2 clickable"
+          :style="$vuetify.breakpoint.smAndDown ? { fontSize: '100%' } : ''"
+          class="routerLink mx-2 clickable"
           @click="$router.push('about')"
         >
           About
         </button>
       </v-col>
+      <v-col cols="6" />
       <v-spacer />
     </v-row>
-    <v-spacer class="hidden-sm-and-down" />
   </v-app-bar>
 </template>
 
@@ -57,21 +57,10 @@ export default {
   margin-top: -6px;
 }
 
-.icon {
-  width: 100%;
-}
-
-.routerLinkSmall {
-  font-weight: bold;
-  color: #c4c4c4;
-  font-size: 4.5vw;
-  text-transform: none;
-}
-
 .routerLink {
   font-weight: bold;
   color: #c4c4c4;
-  font-size: 22px;
+  font-size: 130%;
   text-transform: none;
 }
 </style>

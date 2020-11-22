@@ -3,16 +3,20 @@
     <v-img
       @click="$router.push(name)"
       class="cardImg"
+      :style="$vuetify.breakpoint.smAndDown ? { width: '95vw' } : ''"
       :src="require(`@/assets/thumbnail/${name}.png`)"
     ></v-img>
-    <div class="content">
-      <v-row>
-        <v-col class="centerV" cols="1">
+    <div
+      class="content"
+      :style="$vuetify.breakpoint.smAndDown ? { width: '95vw' } : ''"
+    >
+      <v-row :style="{ maxHeight: '130px' }">
+        <v-col class="centerV hidden-xs-only" cols="1">
           <div v-if="type.includes('dev')" class="devBadge" />
           <div v-if="type.includes('design')" class="designBadge" />
           <div v-if="type.includes('art')" class="artBadge" />
         </v-col>
-        <v-col cols="5">
+        <v-col cols="4" class="pl-5">
           <v-card-title>
             {{ title }}
           </v-card-title>
@@ -20,7 +24,7 @@
             {{ stack.join(" ") }}
           </v-card-subtitle>
         </v-col>
-        <v-col cols="6">
+        <v-col cols="7">
           <v-card-text>{{ description }}</v-card-text>
         </v-col>
       </v-row>
@@ -48,7 +52,7 @@ export default {
 
 <style>
 .cardImg {
-  width: 80vw;
+  width: 48vw;
   border-radius: 12px !important;
 }
 
@@ -84,27 +88,28 @@ export default {
 }
 
 .content {
+  width: 48vw;
   padding-bottom: 2vw;
   padding-top: 1vw;
 }
 
 .devBadge {
-  height: 1vw;
-  width: 1vw;
+  height: 12px;
+  width: 12px;
   background-color: #6c86a1;
   margin: 8px 8px 12px 16px;
   border-radius: 50%;
 }
 .designBadge {
-  height: 1vw;
-  width: 1vw;
+  height: 12px;
+  width: 12px;
   background-color: #eba0a0;
   margin: 8px 8px 12px 16px;
   border-radius: 50%;
 }
 .artBadge {
-  height: 1vw;
-  width: 1vw;
+  height: 12px;
+  width: 12px;
   background-color: #88d3c8;
   margin: 8px 8px 12px 16px;
   border-radius: 50%;

@@ -32,7 +32,7 @@ export default {
     font-weight: bold;
     color: #3f3f3f;
     margin: 16px;
-    font-size: 48px;
+    font-size: 5vw;
   }
   h2 {
     font-weight: bold;
