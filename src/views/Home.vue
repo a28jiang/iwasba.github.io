@@ -7,7 +7,7 @@
         class="hidden-sm-and-down"
         :style="{ position: relative }"
       >
-        <v-img class="design1" max-width="130" src="../assets/design1.svg" />
+        <v-img class="design1" width="10vw" src="../assets/design1.svg" />
       </v-col>
 
       <v-col class="centered" md="5" sm="12">
@@ -44,7 +44,7 @@
       >
         <v-img
           class="semiCircle"
-          max-width="300"
+          width="15vw"
           :src="require(`@/assets/ellipse.svg`)"
         />
       </v-col>
@@ -77,19 +77,17 @@
       >
     </v-row>
 
-    <v-row class="projects">
-      <transition-group tag="div" name="fade" class="row">
-        <v-col
-          sm="12"
-          md="6"
-          class="centered"
-          v-for="item in items"
-          :key="item.key"
-        >
-          <ProjectCard v-bind="item" :key="item.key" />
-        </v-col>
-      </transition-group>
-    </v-row>
+    <transition-group tag="div" name="fade" class="row projects">
+      <v-col
+        sm="12"
+        md="6"
+        class="centered"
+        v-for="item in items"
+        :key="item.key"
+      >
+        <ProjectCard v-bind="item" :key="item.key" />
+      </v-col>
+    </transition-group>
   </div>
 </template>
 
@@ -161,7 +159,7 @@ export default {
 
 <style scoped>
 .projects {
-  padding: 0 3% 0 3%;
+  padding: 0 12px 0 12px;
 }
 
 .titleAccent {

@@ -1,5 +1,5 @@
 <template>
-  <v-card flat class="cardStyle" min-width="300">
+  <v-card flat min-width="300">
     <v-img
       @click="$router.push(name)"
       class="cardImg"
@@ -10,7 +10,13 @@
       class="content"
       :style="$vuetify.breakpoint.smAndDown ? { width: '95vw' } : ''"
     >
-      <v-row :style="{ maxHeight: '130px' }">
+      <v-row
+        :style="
+          $vuetify.breakpoint.smAndDown
+            ? { maxHeight: '160px' }
+            : { maxHeight: '130px' }
+        "
+      >
         <v-col class="centerV hidden-xs-only" cols="1">
           <div v-if="type.includes('dev')" class="devBadge" />
           <div v-if="type.includes('design')" class="designBadge" />
@@ -51,6 +57,58 @@ export default {
 </script>
 
 <style>
+@media all and (min-width: 1300px) {
+  .v-card__title {
+    align-items: flex-start;
+    word-break: inherit !important;
+    word-wrap: normal;
+    font-size: 32px;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .v-card__subtitle {
+    align-items: flex-start;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .v-card__text {
+    align-items: flex-start;
+    text-align: left;
+    font-size: 16px;
+    color: gray;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media all and (max-width: 1300px) {
+  .v-card__title {
+    align-items: flex-start;
+    word-break: inherit !important;
+    word-wrap: normal;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .v-card__subtitle {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .v-card__text {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .cardImg {
   width: 48vw;
   border-radius: 12px !important;
@@ -60,27 +118,6 @@ export default {
   opacity: 0.5;
   cursor: pointer;
 }
-
-.v-card__title {
-  align-items: flex-start;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.v-card__subtitle {
-  align-items: flex-start;
-  text-align: left;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.v-card__text {
-  align-items: flex-start;
-  text-align: left;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .centerV {
   display: flex;
   justify-content: center;
