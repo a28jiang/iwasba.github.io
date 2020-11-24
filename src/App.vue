@@ -1,12 +1,10 @@
 <template>
   <v-app>
     <div id="app">
-      <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
       <NavBar />
-      <router-view id="appContent" />
+      <transition name="component-fade" mode="out-in">
+        <router-view id="appContent" />
+      </transition>
       <Footer />
     </div>
   </v-app>
@@ -74,6 +72,11 @@ export default {
   justify-content: center;
   align-items: flex-end;
 }
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .topLeft {
   display: flex;
   justify-content: left;
@@ -107,5 +110,67 @@ a {
       color: #42b983;
     }
   }
+}
+</style>
+<style>
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+.component-fade-enter,
+.component-fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
 }
 </style>

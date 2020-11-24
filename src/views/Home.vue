@@ -13,7 +13,7 @@
       <v-col class="centered" md="5" sm="12">
         <v-img
           :max-width="$vuetify.breakpoint.smAndDown ? '60vw' : '32vw'"
-          src="../assets/hero.png"
+          src="../assets/mainhero.png"
         />
       </v-col>
       <v-col
@@ -51,7 +51,7 @@
     </v-row>
 
     <v-row
-      class="sectionPadding "
+      class="sectionPadding"
       :justify="$vuetify.breakpoint.smAndDown ? 'center' : 'end'"
     >
       <v-spacer class="hidden-sm-and-down" />
@@ -77,16 +77,26 @@
       >
     </v-row>
 
-    <transition-group tag="div" name="fade" class="row projects">
-      <v-col
-        sm="12"
-        md="6"
-        class="centered"
-        v-for="item in items"
-        :key="item.key"
-      >
+    <transition-group tag="div" name="list" class="row projects">
+      <v-col sm="12" md="6" class="top" v-for="item in items" :key="item.key">
         <ProjectCard v-bind="item" :key="item.key" />
       </v-col>
+      <v-row
+        :style="{ minHeight: '500px' }"
+        v-if="!activeDev && !activeDesign && !activeArt"
+        key="alt"
+      >
+        <v-col cols="6" class="right">
+          <h3
+            :style="$vuetify.breakpoint.smAndDown ? { fontSize: '20px' } : ''"
+          >
+            No projects currently selected
+          </h3>
+        </v-col>
+        <v-col cols="6" class="left">
+          <v-img max-width="28vw" src="../assets/althero.png" />
+        </v-col>
+      </v-row>
     </transition-group>
   </div>
 </template>
@@ -167,21 +177,23 @@ export default {
   margin-left: 0.3em;
 }
 .design1 {
+  opacity: 0;
+  animation: fade-in-down 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
 }
 
-.circleContainer {
-  position: absolute;
-  top: -150px;
-  left: 90%;
-}
-
 .semiCircle {
   position: absolute;
+
+  opacity: 0;
+  animation: fade-in-left 1s;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
   top: 0%;
-  left: 92%;
 }
 
 .design1 {
@@ -271,14 +283,7 @@ export default {
 }
 
 .sectionPadding {
+  padding-right: 16px;
   margin-top: 60px;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 </style>

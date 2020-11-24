@@ -17,31 +17,31 @@
       <v-img
         v-if="designVar.includes(1)"
         class="hidden-sm-and-down design1a"
-        max-width="150"
+        width="10vw"
         :src="require(`@/assets/ellipse.svg`)"
       />
       <v-img
         v-if="designVar.includes(1)"
         class="hidden-sm-and-down design1b"
-        max-width="80"
+        width="5vw"
         :src="require(`@/assets/dots2.svg`)"
       />
       <v-img
         v-if="designVar.includes(2)"
         class="hidden-sm-and-down design2a"
-        max-width="100"
+        width="6vw"
         :src="require(`@/assets/ellipse.svg`)"
       />
       <v-img
         v-if="designVar.includes(2)"
         class="hidden-sm-and-down design2b"
-        max-width="80"
+        width="5vw"
         :src="require(`@/assets/dots.svg`)"
       />
       <v-img
         v-if="designVar.includes(3)"
         class="hidden-sm-and-down design3"
-        max-width="80"
+        width="5vw"
         :src="require(`@/assets/dots2.svg`)"
       />
       <v-img
@@ -84,29 +84,49 @@ export default {
 }
 
 .design1a {
+  opacity: 0;
+  animation: fade-in-left 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   position: absolute;
   top: 0px;
   left: 20%;
 }
 .design1b {
-  position: absolute;
+  opacity: 0;
   transform: rotate(90deg);
+  animation: fade-in 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  position: absolute;
   top: 320px;
   left: 85%;
   z-index: 1;
 }
 .design2a {
+  opacity: 0;
+  animation: fade-in-left 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   position: absolute;
   top: 300px;
   left: -112%;
   z-index: 1;
 }
 .design2b {
+  opacity: 0;
+  animation: fade-in-left 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   position: absolute;
   top: 260px;
   left: -120%;
 }
 .design3 {
+  opacity: 0;
+  animation: fade-in-down 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   position: absolute;
   top: 260px;
   left: 25%;

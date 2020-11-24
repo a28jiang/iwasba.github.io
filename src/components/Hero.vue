@@ -24,7 +24,10 @@
             mdi-github
           </v-icon></v-row
         >
-        <v-row v-if="product" class="clickable mt-12 hidden-sm-and-down">
+        <v-row
+          v-if="product"
+          class="clickable mt-12 hidden-sm-and-down fadeLeft"
+        >
           <h4>Try it out</h4>
           <v-icon large class="icon">
             mdi-exit-to-app
@@ -36,25 +39,25 @@
       <v-img
         v-if="designVar.includes(1)"
         class="design1"
-        max-width="130"
+        width="8vw"
         :src="require(`@/assets/design1.svg`)"
       />
       <v-img
         v-if="designVar.includes(2)"
         class="design2"
-        max-width="130"
+        width="8vw"
         :src="require(`@/assets/design1.svg`)"
       />
       <v-img
         v-if="designVar.includes(3)"
         class="design3"
-        max-width="80"
+        width="5vw"
         :src="require(`@/assets/dots.svg`)"
       />
       <v-img
-        v-if="designVar.includes(3)"
+        v-if="designVar.includes(4)"
         class="design4"
-        max-width="200"
+        width="13vw"
         :src="require(`@/assets/ellipse.svg`)"
       />
     </v-col>
@@ -94,18 +97,37 @@ export default {
   width: 50vw;
   z-index: 1;
 }
+
+.fadeLeft {
+  opacity: 0;
+  animation: fade-in-left 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
 .design1 {
+  opacity: 0;
+  animation: fade-in-down 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
   position: absolute;
   top: 40px;
   left: 90%;
 }
 .design2 {
+  opacity: 0;
+  animation: fade-in-right 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
   position: absolute;
   top: 40px;
   left: 85%;
   transform: rotate(-90deg);
 }
 .design3 {
+  opacity: 0;
+  animation: fade-in-right 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
   position: absolute;
   top: 320px;
   left: 90%;
@@ -113,9 +135,13 @@ export default {
 }
 
 .design4 {
+  opacity: 0;
+  animation: fade-in-left 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
   position: absolute;
   top: 80px;
-  left: 7%;
+  left: 12%;
   z-index: 0;
 }
 </style>

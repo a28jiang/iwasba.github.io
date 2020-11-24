@@ -26,8 +26,8 @@
           <v-card-title>
             {{ title }}
           </v-card-title>
-          <v-card-subtitle>
-            {{ stack.join(" ") }}
+          <v-card-subtitle class="pt-1">
+            {{ stack.join(", ") }}
           </v-card-subtitle>
         </v-col>
         <v-col cols="7">
@@ -50,9 +50,7 @@ export default {
   },
 
   data: () => ({}),
-  mounted: function() {
-    console.log(this.title);
-  }
+  mounted: function() {}
 };
 </script>
 
@@ -62,6 +60,8 @@ export default {
     align-items: flex-start;
     word-break: inherit !important;
     word-wrap: normal;
+    font-weight: 600;
+    color: #4a4a4a;
     font-size: 32px;
     text-align: left;
     padding-left: 0;
@@ -84,12 +84,35 @@ export default {
     padding-left: 0;
     padding-right: 0;
   }
+  .devBadge {
+    height: 16px;
+    width: 16px;
+    background-color: #6c86a1;
+    margin: 8px 8px 12px 16px;
+    border-radius: 50%;
+  }
+  .designBadge {
+    height: 16px;
+    width: 16px;
+    background-color: #eba0a0;
+    margin: 8px 8px 12px 16px;
+    border-radius: 50%;
+  }
+  .artBadge {
+    height: 16px;
+    width: 16px;
+    background-color: #88d3c8;
+    margin: 8px 8px 12px 16px;
+    border-radius: 50%;
+  }
 }
 @media all and (max-width: 1300px) {
   .v-card__title {
     align-items: flex-start;
     word-break: inherit !important;
     word-wrap: normal;
+    font-weight: 600;
+    color: #4a4a4a;
     text-align: left;
     padding-left: 0;
     padding-right: 0;
@@ -107,6 +130,27 @@ export default {
     text-align: left;
     padding-left: 0;
     padding-right: 0;
+  }
+  .devBadge {
+    height: 12px;
+    width: 12px;
+    background-color: #6c86a1;
+    margin: 8px 8px 12px 16px;
+    border-radius: 50%;
+  }
+  .designBadge {
+    height: 12px;
+    width: 12px;
+    background-color: #eba0a0;
+    margin: 8px 8px 12px 16px;
+    border-radius: 50%;
+  }
+  .artBadge {
+    height: 12px;
+    width: 12px;
+    background-color: #88d3c8;
+    margin: 8px 8px 12px 16px;
+    border-radius: 50%;
   }
 }
 .cardImg {
@@ -128,27 +172,5 @@ export default {
   width: 48vw;
   padding-bottom: 2vw;
   padding-top: 1vw;
-}
-
-.devBadge {
-  height: 12px;
-  width: 12px;
-  background-color: #6c86a1;
-  margin: 8px 8px 12px 16px;
-  border-radius: 50%;
-}
-.designBadge {
-  height: 12px;
-  width: 12px;
-  background-color: #eba0a0;
-  margin: 8px 8px 12px 16px;
-  border-radius: 50%;
-}
-.artBadge {
-  height: 12px;
-  width: 12px;
-  background-color: #88d3c8;
-  margin: 8px 8px 12px 16px;
-  border-radius: 50%;
 }
 </style>

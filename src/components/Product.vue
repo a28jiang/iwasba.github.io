@@ -8,19 +8,19 @@
       <v-img
         v-if="designVar.includes(1)"
         class="design1"
-        max-width="130"
+        width="10vw"
         :src="require(`@/assets/design1.svg`)"
       />
       <v-img
         v-if="designVar.includes(2)"
         class="design2"
-        max-width="150"
+        width="12vw"
         :src="require(`@/assets/ellipse.svg`)"
       />
       <v-img
         v-if="designVar.includes(3)"
         class="design3"
-        max-width="80"
+        width="5vw"
         :src="require(`@/assets/dots2.svg`)"
       />
     </v-col>
@@ -68,15 +68,28 @@ export default {
 }
 
 .design1 {
+  opacity: 0;
+  animation: fade-in-left 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   position: absolute;
   left: 20%;
 }
 .design2 {
+  opacity: 0;
+  animation: fade-in-down 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   position: absolute;
-  left: 160%;
+  left: 180%;
+  top: 5%;
   z-index: 0;
 }
 .design3 {
+  opacity: 0;
+  animation: fade-in 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   position: absolute;
   left: 250%;
   top: 68%;

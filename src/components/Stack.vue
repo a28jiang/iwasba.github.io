@@ -11,7 +11,8 @@
       <v-row>
         <v-col class="centered" v-for="tool in stack" :key="tool">
           <img
-            :style="imgSize ? { height: imgSize } : { height: '10vw' }"
+            class="fadeLeft"
+            :style="imgSize ? { height: imgSize } : { height: '8vw' }"
             :src="require(`@/assets/icons/${tool}.png`)"
           />
         </v-col>
@@ -34,6 +35,12 @@ export default {
 </script>
 
 <style scoped>
+.fadeLeft {
+  opacity: 0;
+  animation: fade-in-left 1.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+}
 .fillWidth {
   min-width: 100%;
 }
