@@ -3,7 +3,7 @@
     <div id="app">
       <NavBar />
       <transition name="component-fade" mode="out-in">
-        <router-view id="appContent" />
+        <router-view :style="{ minHeight: '100vh' }" id="appContent" />
       </transition>
       <Footer />
     </div>
@@ -166,7 +166,7 @@ a {
 
 .list-enter-active,
 .list-leave-active {
-  transition: all 0.5s;
+  transition: all 1s;
 }
 .list-enter,
 .list-leave-to {

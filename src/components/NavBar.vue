@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app flat color="rgba(0,0,0,0)" hide-on-scroll>
+  <v-app-bar absolute app flat color="rgba(0,0,0,0)">
     <v-row class="navContent">
       <v-col class="centered noPadding" cols="1">
         <img
@@ -8,7 +8,7 @@
           :style="
             $vuetify.breakpoint.smAndDown
               ? { height: '25px' }
-              : { height: '45px' }
+              : { height: '40px' }
           "
           src="../assets/logo.png"
         />

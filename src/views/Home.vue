@@ -12,8 +12,8 @@
 
       <v-col class="centered" md="5" sm="12">
         <v-img
-          :max-width="$vuetify.breakpoint.smAndDown ? '60vw' : '32vw'"
-          src="../assets/mainhero.png"
+          :max-width="$vuetify.breakpoint.smAndDown ? '55vw' : '32vw'"
+          src="../assets/mainhero.svg"
         />
       </v-col>
       <v-col
@@ -94,7 +94,7 @@
           </h3>
         </v-col>
         <v-col cols="6" class="left">
-          <v-img max-width="28vw" src="../assets/althero.png" />
+          <v-img max-width="28vw" src="../assets/althero.svg" />
         </v-col>
       </v-row>
     </transition-group>
@@ -177,13 +177,13 @@ export default {
   margin-left: 0.3em;
 }
 .design1 {
+  position: absolute;
   opacity: 0;
   animation: fade-in-down 1s;
   animation-delay: 1s;
   animation-fill-mode: both;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  top: 4%;
+  left: 8%;
 }
 
 .semiCircle {
@@ -194,12 +194,6 @@ export default {
   animation-fill-mode: both;
   animation-delay: 1.5s;
   top: 0%;
-}
-
-.design1 {
-  position: absolute;
-  top: 4%;
-  left: 8%;
 }
 </style>
 

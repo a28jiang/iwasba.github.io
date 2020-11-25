@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style scoped>
+.shiftUp {
+  margin-top: -134px;
+}
 .footer {
   width: 100%;
   display: flex;

@@ -24,10 +24,7 @@
             mdi-github
           </v-icon></v-row
         >
-        <v-row
-          v-if="product"
-          class="clickable mt-12 hidden-sm-and-down fadeLeft"
-        >
+        <v-row v-if="product" class="clickable mt-md-12 mt-sm-6 fadeLeft">
           <h4>Try it out</h4>
           <v-icon large class="icon">
             mdi-exit-to-app
@@ -101,7 +98,7 @@ export default {
 .fadeLeft {
   opacity: 0;
   animation: fade-in-left 1.5s;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
   animation-fill-mode: both;
 }
 .design1 {
