@@ -47,29 +47,14 @@
         </p>
       </template>
     </Product>
-    <v-row class="px-12">
-      <v-col class="hidden-sm-and-down" cols="1" />
-      <v-col>
-        <p class="mt-6" :style="{ textAlign: 'left' }">
-          Chrome extensions are extremely versatile but I knew I wanted my
+    <TextBlock
+      text="Chrome extensions are extremely versatile but I knew I wanted my
           extension to have an animated icon to increase interactivity and
           portray the Rabbit's emotions in real time. I also wanted users to
           have a mini-dashboard of their browsing habits shown upon opening the
-          popup.
-        </p>
-      </v-col>
-      <v-col class="hidden-sm-and-down" cols="1" />
-    </v-row>
-    <v-row>
-      <v-col class="hidden-sm-and-down" cols="1" />
-      <v-col class="centered">
-        <v-img
-          max-width="60vw"
-          :src="require(`@/assets/Rabbit/process1.png`)"
-        />
-      </v-col>
-      <v-col class="hidden-sm-and-down" cols="1" />
-    </v-row>
+          popup."
+    />
+    <ImageBlock name="Rabbit" />
   </div>
 </template>
 
@@ -78,10 +63,12 @@ import Hero from "@/components/Hero.vue";
 import Inspiration from "@/components/Inspiration.vue";
 import Stack from "@/components/Stack.vue";
 import Product from "@/components/Product.vue";
+import TextBlock from "@/components/TextBlock.vue";
+import ImageBlock from "@/components/ImageBlock.vue";
 
 export default {
   name: "Rabbit",
-  components: { Hero, Inspiration, Stack, Product },
+  components: { Hero, Inspiration, Stack, Product, TextBlock, ImageBlock },
   data: function() {
     return {
       stack: ["javascript", "html", "chrome"]

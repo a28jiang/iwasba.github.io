@@ -279,5 +279,6 @@ export default {
 
 .sectionPadding {
   margin-top: 60px;
+  margin-bottom: 20px;
 }
 </style>
