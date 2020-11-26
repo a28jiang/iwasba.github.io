@@ -18,7 +18,7 @@
     },
     {
       "title": "Covid Tracker",
-      "stack": ["VueJS", "Figma", "Covid19-API"],
+      "stack": ["VueJS", "Figma", "Covid19API"],
       "description": "A visually striking web-app that provides key insight towards transmission rates as well as statistics such as deaths and recoveries.",
       "name": "covid",
       "type": ["dev", "design"],

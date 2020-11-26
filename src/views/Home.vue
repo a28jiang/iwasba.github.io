@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row :style="{ height: '60px' }" />
+    <v-row :style="{ height: '5vw' }" />
     <v-row>
       <v-col
         cols="2"
@@ -13,7 +13,7 @@
       <v-col class="centered" md="5" sm="12">
         <v-img
           :max-width="$vuetify.breakpoint.smAndDown ? '55vw' : '32vw'"
-          src="../assets/mainhero.svg"
+          src="../assets/hero.svg"
         />
       </v-col>
       <v-col
@@ -53,6 +53,7 @@
     <v-row
       class="sectionPadding"
       :justify="$vuetify.breakpoint.smAndDown ? 'center' : 'end'"
+      :style="$vuetify.breakpoint.smAndDown ? '' : { paddingRight: '12vw' }"
     >
       <v-spacer class="hidden-sm-and-down" />
 
@@ -94,7 +95,7 @@
           </h3>
         </v-col>
         <v-col cols="6" class="left">
-          <v-img max-width="28vw" src="../assets/althero.svg" />
+          <v-img max-width="25vw" src="../assets/althero.svg" />
         </v-col>
       </v-row>
     </transition-group>
@@ -169,7 +170,7 @@ export default {
 
 <style scoped>
 .projects {
-  padding: 0 12px 0 12px;
+  padding: 0 12vw 0 12vw;
 }
 
 .titleAccent {
@@ -277,7 +278,6 @@ export default {
 }
 
 .sectionPadding {
-  padding-right: 16px;
   margin-top: 60px;
 }
 </style>

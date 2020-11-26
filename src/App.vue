@@ -94,7 +94,14 @@ export default {
   align-items: center;
 }
 
+.padSides {
+  padding: 0 10vw 0 10vw;
+}
+.fillWidth {
+  min-width: 100%;
+}
 a {
+  text-decoration: none;
   color: white !important;
   font-weight: 500;
 }

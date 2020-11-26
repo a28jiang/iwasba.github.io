@@ -45,6 +45,14 @@
         :src="require(`@/assets/dots2.svg`)"
       />
       <v-img
+        :style="
+          $vuetify.breakpoint.smAndDown
+            ? ''
+            : [
+                offSetY ? { marginTop: `${offSetY}vw` } : { marginTop: '' },
+                offSetX ? { marginLeft: `${offSetX}vw` } : { marginLeft: '' }
+              ]
+        "
         class="responsiveImage"
         :max-width="imgSize"
         :src="require(`@/assets/${name}/inspiration.png`)"
@@ -60,15 +68,14 @@ export default {
   props: {
     name: String,
     designVar: Array,
-    imgSize: Number
+    imgSize: Number,
+    offSetX: Number,
+    offSetY: Number
   }
 };
 </script>
 
 <style scoped>
-.fillWidth {
-  min-width: 100%;
-}
 .imagePanel {
   position: relative;
   min-height: 300px;
@@ -80,7 +87,6 @@ export default {
 .responsiveImage {
   position: absolute;
   width: 80vw;
-  top: 20px;
 }
 
 .design1a {

@@ -1,179 +1,96 @@
 <template>
-  <div class="background">
+  <div>
     <Hero
-      :heroSize="550"
-      github="a"
-      product="a"
+      :heroSize="500"
+      github="https://github.com/iwasba/Rabbit-Chrome-Extension"
+      product="https://chrome.google.com/webstore/detail/rabbit-productivity-procr/ahlcihfjafcicppnhjcnbhcgmajkmimj?hl=en"
       name="Rabbit"
+      subtitle="Productivity Extension"
       title="Rabbit"
-      :designVar="2"
+      :designVar="[2]"
     />
+    <Inspiration name="Rabbit" :designVar="[1, 2]" :imgSize="350" :offSetX="5">
+      <template v-slot:description>
+        <p class="mt-6">
+          Productivity often comes and goes as it pleases. Days can seemingly
+          fly past while browsing sites like Netflix and YouTube. Rabbit is a
+          unique chrome extension that shows an eager, energetic rabbit to help
+          users stay focused. Rabbit ranks the top sites of a user and has a
+          variety of moods, from disappointment to happy, reflecting the users
+          current browsing patterns.
+        </p>
+      </template>
+    </Inspiration>
+    <Stack :stack="stack" name="Rabbit">
+      <template v-slot:description>
+        <p class="mt-6">
+          This project was created using vanilla JS, HTML and CSS. Logic for the
+          extension was written using javascript with the help of Chrome
+          <b>tabs</b> and <b>storage</b> APIs. This was an excellent project to
+          revisit the fundamentals and create an application without using any
+          fancy frameworks. <br /><br />To dive into Chrome API documentation,
+          <a
+            target="_blank"
+            href="https://developer.chrome.com/extensions/api_index"
+            >click here</a
+          >
+        </p>
+      </template>
+    </Stack>
 
-    <v-row class="inspo px-12 pb-6">
-      <v-col class="hidden-sm-and-down" cols="2" />
+    <Product :designVar="[1]" :imgSize="440" name="Rabbit">
+      <template v-slot:description>
+        <p class="mt-6">
+          I experimented with different popup layouts and designs. The design on
+          the left features a more minimalistic interface, but I opted with a
+          more detailed interface shown on the right to avoid confusion.
+        </p>
+      </template>
+    </Product>
+    <v-row class="px-12">
+      <v-col class="hidden-sm-and-down" cols="1" />
       <v-col>
-        <div class="leftAlign">
-          <h2>Inspiration</h2>
-          <p class="mt-6">
-            With COVID-19 being a major issue affecting the entire world, I
-            thought it would be nice to create a web-app that friends and family
-            could use to keep track of the latest numbers.
-          </p>
-        </div>
+        <p class="mt-6" :style="{ textAlign: 'left' }">
+          Chrome extensions are extremely versatile but I knew I wanted my
+          extension to have an animated icon to increase interactivity and
+          portray the Rabbit's emotions in real time. I also wanted users to
+          have a mini-dashboard of their browsing habits shown upon opening the
+          popup.
+        </p>
       </v-col>
-      <v-col class="hidden-md-and-up">
-        <v-img
-          max-width="400"
-          :src="require(`@/assets/${$options.name}/inspiration.png`)"
-        />
-      </v-col>
-      <v-col class="hidden-sm-and-down" :style="{ position: 'relative' }">
-        <v-img class="design2" max-width="150" src="../../assets/ellipse.svg" />
-        <v-img class="design3" max-width="80" src="../../assets/dots2.svg" />
-        <v-img
-          class="inspiration"
-          max-width="400"
-          :src="require(`@/assets/${$options.name}/inspiration.png`)"
-        />
-      </v-col>
+      <v-col class="hidden-sm-and-down" cols="1" />
     </v-row>
-
-    <v-row class="stack px-12">
-      <v-col class="hidden-sm-and-down" cols="2" />
-      <v-col sm="12" md="6">
-        <div class="leftAlign">
-          <h2 :style="{ color: 'white' }">Tech Stack</h2>
-          <p class="mt-6">
-            I used VueJS to create the frontend. Using axios, I was able to call
-            the COVID19-API which is a public api that returns COVID-19 data as
-            JSON. Using the data from the api, I then used ChartJS to render
-            graphs. This project increased my knowledge in javascript and helped
-            me discover a wonderful API.
-            <br /><br />To learn more about covid19-api, click here
-          </p>
-        </div>
-      </v-col>
-      <v-col class="centered">
-        <v-row>
-          <v-col class="centered" v-for="tool in stack" :key="tool">
-            <img
-              :style="{ maxHeight: '80px' }"
-              :src="require(`@/assets/icons/${tool}.png`)"
-            />
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
-
-    <v-row class="product px-12">
-      <v-col class="hidden-sm-and-down" cols="2">
-        <v-img class="design4" max-width="130" src="../../assets/design1.svg" />
-      </v-col>
+    <v-row>
+      <v-col class="hidden-sm-and-down" cols="1" />
       <v-col class="centered">
         <v-img
-          max-width="420"
-          :src="require(`@/assets/${$options.name}/product.png`)"
+          max-width="60vw"
+          :src="require(`@/assets/Rabbit/process1.png`)"
         />
       </v-col>
-      <v-col
-        class="centered"
-        sm="12"
-        md="4"
-        :order="$vuetify.breakpoint.smAndDown ? 'first' : 'last'"
-      >
-        <div class="leftAlign">
-          <h2>Product Design</h2>
-          <p class="mt-6">
-            I took inspiration from stock market charts and indicators. When
-            looking at the latest number of cases, we're more-so looking for
-            trends and curves so I made sure to include % changes between days
-            so patterns can be identified, just like stocks.
-          </p>
-        </div>
-      </v-col>
+      <v-col class="hidden-sm-and-down" cols="1" />
     </v-row>
   </div>
 </template>
 
 <script>
 import Hero from "@/components/Hero.vue";
+import Inspiration from "@/components/Inspiration.vue";
+import Stack from "@/components/Stack.vue";
+import Product from "@/components/Product.vue";
+
 export default {
   name: "Rabbit",
-  components: { Hero },
+  components: { Hero, Inspiration, Stack, Product },
   data: function() {
     return {
-      stack: ["chartjs", "covid19", "vue"]
+      stack: ["javascript", "html", "chrome"]
     };
   },
   mounted() {
     window.scrollTo(0, 0);
-    console.log(this.$options.name);
   }
 };
 </script>
 
-<style scoped>
-.padTop {
-  margin-top: 60px;
-}
-.stack {
-  padding-top: 72px;
-  padding-bottom: 72px;
-  background-color: #6c86a1;
-}
-
-.background {
-  /* padding: 0 10% 0 10%; */
-  height: 100%;
-  /* background: linear-gradient(white 60%, #6c86a1 40%); */
-}
-
-.design1 {
-  position: absolute;
-  top: 40px;
-  left: 90%;
-}
-.design2 {
-  position: absolute;
-  top: -70px;
-  left: 20%;
-}
-.design3 {
-  position: absolute;
-  transform: rotate(90deg);
-  top: 200px;
-  left: 80%;
-  z-index: 1;
-}
-
-.design4 {
-  transform: scaleX(-1);
-  margin-left: 40px;
-}
-
-.inspiration {
-  position: absolute;
-  top: -80px;
-  left: 0%;
-}
-
-.hero {
-  width: 80vw;
-}
-.banner {
-  min-height: 700px;
-}
-
-.leftAlign {
-  text-align: left;
-}
-
-.pushTop {
-  margin-top: -64px;
-}
-
-.icon {
-  color: #6c86a1;
-  padding-left: 16px;
-}
-</style>
+<style scoped></style>

@@ -6,35 +6,25 @@
       :style="$vuetify.breakpoint.smAndDown ? { width: '95vw' } : ''"
       :src="require(`@/assets/thumbnail/${name}.png`)"
     ></v-img>
-    <div
-      class="content"
-      :style="$vuetify.breakpoint.smAndDown ? { width: '95vw' } : ''"
-    >
-      <v-row
-        :style="
-          $vuetify.breakpoint.smAndDown
-            ? { maxHeight: '160px' }
-            : { maxHeight: '130px' }
-        "
-      >
-        <v-col class="centerV hidden-xs-only" cols="1">
-          <div v-if="type.includes('dev')" class="devBadge" />
-          <div v-if="type.includes('design')" class="designBadge" />
-          <div v-if="type.includes('art')" class="artBadge" />
-        </v-col>
-        <v-col cols="4" class="pl-5">
-          <v-card-title>
-            {{ title }}
-          </v-card-title>
-          <v-card-subtitle class="pt-1">
-            {{ stack.join(", ") }}
-          </v-card-subtitle>
-        </v-col>
-        <v-col cols="7">
-          <v-card-text>{{ description }}</v-card-text>
-        </v-col>
-      </v-row>
-    </div>
+
+    <v-row :style="{ maxHeight: '200px' }">
+      <v-col class="centerV hidden-xs-only" cols="1">
+        <div v-if="type.includes('dev')" class="devBadge" />
+        <div v-if="type.includes('design')" class="designBadge" />
+        <div v-if="type.includes('art')" class="artBadge" />
+      </v-col>
+      <v-col cols="4" class="pl-5">
+        <v-card-title class="left">
+          {{ title }}
+        </v-card-title>
+        <v-card-subtitle class="pt-1">
+          {{ stack.join(", ") }}
+        </v-card-subtitle>
+      </v-col>
+      <v-col cols="7">
+        <v-card-text>{{ description }}</v-card-text>
+      </v-col>
+    </v-row>
   </v-card>
 </template>
 

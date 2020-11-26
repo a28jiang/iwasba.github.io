@@ -19,14 +19,22 @@
           ><h2>{{ title }}</h2></v-row
         >
         <v-row
-          ><h3>Data Visualization</h3>
-          <v-icon v-if="github" :href="github" class="clickable icon">
+          ><h3>{{ subtitle }}</h3>
+          <v-icon
+            v-if="github"
+            @click="openLink(github)"
+            class="clickable icon"
+          >
             mdi-github
           </v-icon></v-row
         >
-        <v-row v-if="product" class="clickable mt-md-12 mt-sm-6 fadeLeft">
-          <h4>Try it out</h4>
-          <v-icon large class="icon">
+        <v-row
+          v-if="product"
+          @click="openLink(product)"
+          class="mt-md-12 mt-sm-6 fadeLeft"
+        >
+          <h4 class="clickable">Try it out</h4>
+          <v-icon large class="icon clickable">
             mdi-exit-to-app
           </v-icon>
         </v-row>
@@ -66,6 +74,7 @@ export default {
   name: "Hero",
   props: {
     title: String,
+    subtitle: String,
     name: String,
 
     github: String,
@@ -73,6 +82,11 @@ export default {
 
     heroSize: Number,
     designVar: Array
+  },
+  methods: {
+    openLink(link) {
+      window.open(link);
+    }
   }
 };
 </script>
@@ -111,14 +125,14 @@ export default {
   left: 90%;
 }
 .design2 {
+  transform: rotate(-90deg);
   opacity: 0;
-  animation: fade-in-right 1s;
+  animation: fade-in 1s;
   animation-delay: 1s;
   animation-fill-mode: both;
   position: absolute;
   top: 40px;
   left: 85%;
-  transform: rotate(-90deg);
 }
 .design3 {
   opacity: 0;

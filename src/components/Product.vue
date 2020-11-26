@@ -1,5 +1,5 @@
 <template>
-  <v-row class="product px-12">
+  <v-row :style="{ paddingTop: '30px' }" class="product px-12">
     <v-col
       class="hidden-sm-and-down"
       cols="1"
@@ -8,42 +8,39 @@
       <v-img
         v-if="designVar.includes(1)"
         class="design1"
-        width="10vw"
+        max-width="10vw"
         :src="require(`@/assets/design1.svg`)"
       />
       <v-img
         v-if="designVar.includes(2)"
         class="design2"
-        width="12vw"
+        max-width="12vw"
         :src="require(`@/assets/ellipse.svg`)"
       />
       <v-img
         v-if="designVar.includes(3)"
         class="design3"
-        width="5vw"
+        max-width="5vw"
         :src="require(`@/assets/dots2.svg`)"
       />
     </v-col>
-    <v-col class="centered">
+    <v-col md="6" sm="12" class="centered">
       <v-img
         :max-width="imgSize"
+        class="responsiveImage"
         :src="require(`@/assets/${name}/product.png`)"
       />
     </v-col>
     <v-col
+      :class="{ fillWidth: $vuetify.breakpoint.smAndDown }"
       class="centered"
-      sm="12"
       md="4"
-      :order="$vuetify.breakpoint.smAndDown ? 'first' : 'last'"
+      sm="12"
+      :order="$vuetify.breakpoint.smAndDown ? 'first' : ''"
     >
       <div class="leftAlign">
         <h2>Product Design</h2>
-        <p class="mt-6">
-          I took inspiration from stock market charts and indicators. When
-          looking at the latest number of cases, we're more-so looking for
-          trends and curves so I made sure to include % changes between days so
-          patterns can be identified, just like stocks.
-        </p>
+        <slot name="description"></slot>
       </div>
     </v-col>
     <v-col class="hidden-sm-and-down" cols="1" />
@@ -63,6 +60,10 @@ export default {
 </script>
 
 <style scoped>
+.responsiveImage {
+  width: 60vw;
+}
+
 .fillWidth {
   min-width: 100%;
 }

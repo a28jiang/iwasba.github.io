@@ -38,7 +38,7 @@ export default {
 .fadeLeft {
   opacity: 0;
   animation: fade-in-left 1.5s;
-  animation-delay: 2.5s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 }
 .fillWidth {

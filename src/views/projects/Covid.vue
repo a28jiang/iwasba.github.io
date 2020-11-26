@@ -5,6 +5,7 @@
       github="a"
       product="a"
       name="Covid"
+      subtitle="Data Visualization"
       title="Covid-19 Tracker"
       :designVar="[1]"
     />
@@ -64,52 +65,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.padTop {
-  margin-top: 60px;
-}
-
-.design2 {
-  position: absolute;
-  top: -70px;
-  left: 20%;
-}
-.design3 {
-  position: absolute;
-  transform: rotate(90deg);
-  top: 200px;
-  left: 80%;
-  z-index: 1;
-}
-
-.design4 {
-  transform: scaleX(-1);
-  margin-left: 40px;
-}
-
-.inspiration {
-  position: absolute;
-  top: -80px;
-  left: 0%;
-}
-
-.hero {
-  width: 80vw;
-}
-.banner {
-  min-height: 700px;
-}
-
-.leftAlign {
-  text-align: left;
-}
-
-.pushTop {
-  margin-top: -64px;
-}
-
-.icon {
-  color: #6c86a1;
-  padding-left: 16px;
-}
-</style>
+<style scoped></style>
