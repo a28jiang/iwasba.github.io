@@ -1,5 +1,5 @@
 <template>
-  <v-row :style="{ paddingTop: '30px' }" class="product px-12">
+  <v-row :style="{ paddingTop: '30px' }" class="product pa-12">
     <v-col
       class="hidden-sm-and-down"
       cols="1"
@@ -39,7 +39,8 @@
       :order="$vuetify.breakpoint.smAndDown ? 'first' : ''"
     >
       <div class="leftAlign">
-        <h2>Product Design</h2>
+        <h2 v-if="title">{{ title }}</h2>
+        <h2 v-else>Product Design</h2>
         <slot name="description"></slot>
       </div>
     </v-col>
@@ -54,6 +55,7 @@ export default {
     description: String,
     designVar: Array,
     name: String,
+    title: String,
     imgSize: Number
   }
 };

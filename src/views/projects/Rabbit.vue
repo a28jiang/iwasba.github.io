@@ -41,20 +41,20 @@
     <Product :designVar="[1]" :imgSize="440" name="Rabbit">
       <template v-slot:description>
         <p class="mt-6">
-          I experimented with different popup layouts and designs. The design on
-          the left features a more minimalistic interface, but I opted with a
-          more detailed interface shown on the right to avoid confusion.
+          Chrome extensions are extremely versatile but I knew I wanted my
+          extension to have an animated icon to increase interactivity and
+          portray the Rabbit's emotions in real time. I also wanted users to
+          have a mini-dashboard of their browsing habits shown upon opening the
+          popup.
         </p>
       </template>
     </Product>
     <TextBlock
-      text="Chrome extensions are extremely versatile but I knew I wanted my
-          extension to have an animated icon to increase interactivity and
-          portray the Rabbit's emotions in real time. I also wanted users to
-          have a mini-dashboard of their browsing habits shown upon opening the
-          popup."
+      text="I experimented with different popup layouts and designs. The design on
+          the left features a more minimalistic interface, but I opted with a
+          more detailed interface shown on the right to avoid confusion."
     />
-    <ImageBlock name="Rabbit/product.png" />
+    <ImageBlock name="Rabbit/process.png" />
   </div>
 </template>
 
