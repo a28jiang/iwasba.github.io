@@ -67,11 +67,6 @@ const routes = [
     component: Watchlist
   },
   {
-    path: "/covid",
-    name: "covid",
-    component: Covid
-  },
-  {
     path: "/Vibeify",
     name: "vibeify",
     component: Vibeify

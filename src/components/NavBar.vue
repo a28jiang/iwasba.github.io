@@ -14,12 +14,15 @@
         />
       </v-col>
       <v-col class="centered noPadding" cols="3">
-        <button
-          :style="$vuetify.breakpoint.smAndDown ? { fontSize: '100%' } : ''"
-          class="routerLink px-2 clickable"
-        >
-          Resume
-        </button>
+        <a href="Nov_2020_Resume.pdf" target="_blank">
+          <button
+            :style="$vuetify.breakpoint.smAndDown ? { fontSize: '100%' } : ''"
+            class="routerLink px-2 clickable"
+            v-on:click="$router.push('resume')"
+          >
+            Resume
+          </button>
+        </a>
       </v-col>
       <v-col class="centered noPadding" cols="2">
         <button
