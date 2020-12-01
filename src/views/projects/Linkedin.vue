@@ -6,7 +6,7 @@
       name="Linkedin"
       subtitle="Business trends and opportunities"
       title="Linkedin Scraper"
-      :designVar="[3, 4]"
+      :designVar="[2, 5]"
     />
     <Inspiration name="Linkedin" :designVar="[2]" :imgSize="500">
       <template v-slot:description>

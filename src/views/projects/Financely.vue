@@ -54,7 +54,6 @@
         </p>
       </template>
     </Product>
-    <ImageBlock name="Financely/qr-design.png" />
     <ImageBlock name="Financely/flows.png" />
   </div>
 </template>

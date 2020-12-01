@@ -85,6 +85,12 @@
         width="13vw"
         :src="require(`@/assets/ellipse.svg`)"
       />
+      <v-img
+        v-if="designVar.includes(5)"
+        class="design5"
+        width="5vw"
+        :src="require(`@/assets/dots.svg`)"
+      />
     </v-col>
   </v-row>
 </template>
@@ -174,6 +180,16 @@ export default {
   animation-fill-mode: both;
   position: absolute;
   top: 80px;
+  left: 12%;
+  z-index: 0;
+}
+.design5 {
+  opacity: 0;
+  animation: fade-in-right 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  position: absolute;
+  top: 120px;
   left: 12%;
   z-index: 0;
 }
