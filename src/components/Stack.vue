@@ -12,7 +12,7 @@
         <v-col class="centered" v-for="tool in stack" :key="tool">
           <img
             class="fadeLeft"
-            :style="imgSize ? { height: imgSize } : { height: '8vw' }"
+            :style="imgSize ? { height: `${imgSize}vw` } : { height: '8vw' }"
             :src="require(`@/assets/icons/${tool}.png`)"
           />
         </v-col>

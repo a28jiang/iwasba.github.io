@@ -13,7 +13,12 @@
         <slot name="description"></slot>
       </div>
     </v-col>
-    <v-col sm="12" md="5" class="imagePanel">
+    <v-col
+      sm="12"
+      md="5"
+      class="imagePanel"
+      :class="{ centered: $vuetify.breakpoint.smAndDown }"
+    >
       <v-img
         v-if="designVar.includes(1)"
         class="hidden-sm-and-down design1a"

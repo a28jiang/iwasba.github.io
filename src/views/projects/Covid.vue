@@ -2,8 +2,8 @@
   <div>
     <Hero
       :heroSize="800"
-      github="a"
-      product="a"
+      github="https://github.com/iwasba/Covid19-App"
+      product="https://covid19-app-3b306.web.app/"
       name="Covid"
       subtitle="Data Visualization"
       title="Covid-19 Tracker"

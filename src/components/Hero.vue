@@ -38,6 +38,16 @@
             mdi-exit-to-app
           </v-icon>
         </v-row>
+        <v-row
+          v-if="devpost"
+          @click="openLink(devpost)"
+          class="mt-md-12 mt-sm-6 fadeLeft"
+        >
+          <h4 class="clickable">View Devpost</h4>
+          <v-icon large class="icon clickable">
+            mdi-exit-to-app
+          </v-icon>
+        </v-row>
       </div>
     </v-col>
     <v-col cols="1" class="hidden-sm-and-down" :style="{ position: relative }">
@@ -79,6 +89,7 @@ export default {
 
     github: String,
     product: String,
+    devpost: String,
 
     heroSize: Number,
     designVar: Array

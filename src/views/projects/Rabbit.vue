@@ -54,7 +54,7 @@
           have a mini-dashboard of their browsing habits shown upon opening the
           popup."
     />
-    <ImageBlock name="Rabbit" />
+    <ImageBlock name="Rabbit/product.png" />
   </div>
 </template>
 

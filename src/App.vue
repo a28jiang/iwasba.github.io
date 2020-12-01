@@ -80,7 +80,7 @@ export default {
 .topLeft {
   display: flex;
   justify-content: left;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .left {
