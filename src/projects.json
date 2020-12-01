@@ -33,7 +33,7 @@
       "key": 4
     },
     {
-      "title": "ScrapedIn ",
+      "title": "LinkedIn Scraper ",
       "stack": ["VueJS", "NodeJS"],
       "description": "An application to help corporations analyze crowd sentiment and business opportunities using Linkedin commenting data.",
       "name": "linkedin",
@@ -43,9 +43,8 @@
     {
       "title": "QR-Pay",
       "stack": ["Adobe XD"],
-      "description": "",
       "name": "qrpay",
-      "link": "An innovative solution for fast and accessible payments based on geo-fencing and QR codes.",
+      "description": "An innovative solution for fast and accessible payments inspired by QR and geo-fencing technology.",
       "type": ["design"],
       "key": 6
     },
