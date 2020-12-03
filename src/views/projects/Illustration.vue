@@ -10,63 +10,63 @@
     </v-row>
     <v-row>
       <TextBlock
-        title="Illustration"
+        title="Illustrations"
         text="Some digital illustrations drawn on my tablet using Sketchbook."
       />
     </v-row>
     <div class="padSides fadeLeft">
       <v-row>
-        <v-col class="centered" sm="6" xs="12">
+        <v-col sm="6" xs="12">
           <v-img
-            aspect-ratio="0.73"
-            :src="require('@/assets/gallery/pic5.jpg')"
+            aspect-ratio="0.652"
+            :src="require('@/assets/illustration/pic3.png')"
           />
         </v-col>
         <v-col sm="6" xs="12">
-          <v-img class="mb-6" :src="require('@/assets/gallery/pic1.jpg')" />
-          <v-img class="mt-6" :src="require('@/assets/gallery/pic15.jpg')" />
+          <v-img
+            class="mb-6"
+            :src="require('@/assets/illustration/pic10.png')"
+          />
+          <v-img
+            class="mt-6"
+            :src="require('@/assets/illustration/pic13.png')"
+          />
         </v-col>
       </v-row>
       <v-row>
         <v-col sm="6" xs="12">
-          <v-img class="mb-6" :src="require('@/assets/gallery/pic29.jpg')" />
-          <v-img class="mt-6" :src="require('@/assets/gallery/pic30.jpg')" />
-        </v-col>
-        <v-col class="centered" sm="6" xs="12">
           <v-img
-            aspect-ratio="0.73"
+            class="mb-6"
+            :src="require('@/assets/illustration/pic9.png')"
+          />
+          <v-img
+            class="mt-6"
+            :src="require('@/assets/illustration/pic11.png')"
+          />
+        </v-col>
+        <v-col sm="6" xs="12">
+          <v-img
+            aspect-ratio="0.652"
             position="left"
-            :src="require('@/assets/gallery/pic14.jpg')"
+            :src="require('@/assets/illustration/pic2.png')"
           />
         </v-col>
       </v-row>
       <v-row>
-        <v-col>
-          <v-img class="mb-6" :src="require('@/assets/gallery/pic8.jpg')" />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col class="centered" sm="6" xs="12">
+        <v-col sm="6" xs="12">
           <v-img
-            aspect-ratio="0.73"
-            :src="require('@/assets/gallery/pic28.jpg')"
+            aspect-ratio="0.652"
+            :src="require('@/assets/illustration/pic6.png')"
           />
         </v-col>
         <v-col sm="6" xs="12">
-          <v-img class="mb-6" :src="require('@/assets/gallery/pic24.jpg')" />
-          <v-img class="mt-6" :src="require('@/assets/gallery/pic26.jpg')" />
-        </v-col>
-      </v-row>
-
-      <v-row>
-        <v-col sm="6" xs="12">
-          <v-img class="mb-6" :src="require('@/assets/gallery/pic23.jpg')" />
-          <v-img class="mt-6" :src="require('@/assets/gallery/pic10.jpg')" />
-        </v-col>
-        <v-col class="centered" sm="6" xs="12">
           <v-img
-            aspect-ratio="0.73"
-            :src="require('@/assets/gallery/pic20.jpg')"
+            class="mb-6"
+            :src="require('@/assets/illustration/pic7.png')"
+          />
+          <v-img
+            class="mt-6"
+            :src="require('@/assets/illustration/pic1.png')"
           />
         </v-col>
       </v-row>
