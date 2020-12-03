@@ -6,6 +6,22 @@
       "description": "A stylistic app designed to help keep track of upcoming shows and movies in an intuitive manner",
       "name": "watchlist",
       "type": ["dev", "design"],
+      "key": 9
+    },
+    {
+      "title": "Photography",
+      "stack": ["Canon T3i", "Lightroom"],
+      "description": "Photography and editing highlights from my travels and adventures with friends.",
+      "name": "photography",
+      "type": ["art"],
+      "key": 0
+    },
+    {
+      "title": "Illustration",
+      "stack": ["Sketchbook"],
+      "description": "Some digital illustrations drawn on my tablet using Sketchbook",
+      "name": "illustration",
+      "type": ["art"],
       "key": 1
     },
     {
@@ -63,22 +79,6 @@
       "name": "hotpot",
       "type": ["design"],
       "key": 8
-    },
-    {
-      "title": "Photography",
-      "stack": ["Canon T3i", "Lightroom"],
-      "description": "Photography and editing highlights from my travels and adventures with friends.",
-      "name": "photography",
-      "type": ["art"],
-      "key": 9
-    },
-    {
-      "title": "Illustration",
-      "stack": ["Sketchbook"],
-      "description": "Some digital illustrations drawn on my tablet using Sketchbook",
-      "name": "illustration",
-      "type": ["art"],
-      "key": 10
     }
   ]
 }

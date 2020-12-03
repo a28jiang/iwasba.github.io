@@ -125,6 +125,7 @@ export default {
     if (this.activeDev) this.addItems("dev");
     if (this.activeDesign) this.addItems("design");
     if (this.activeArt) this.addItems("art");
+    this.items.sort((a, b) => (a.key > b.key ? 1 : -1));
   },
   methods: {
     handleChange: function(type) {
@@ -144,6 +145,7 @@ export default {
 
       if (isAdd) this.addItems(type);
       else this.removeItems(type);
+      this.items.sort((a, b) => (a.key > b.key ? 1 : -1));
     },
 
     addItems: function(type) {
