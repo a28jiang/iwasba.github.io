@@ -67,15 +67,15 @@
     {
       "title": "Photography",
       "stack": ["Canon T3i", "Lightroom"],
-      "description": "Some of my favourite shots of my friends and travels",
-      "name": "photos",
+      "description": "Photography and editing highlights from my travels and adventures with friends.",
+      "name": "photography",
       "type": ["art"],
       "key": 9
     },
     {
       "title": "Illustration",
       "stack": ["Sketchbook"],
-      "description": "Some recent digital illustrations drawn on tablet using Sketchbook",
+      "description": "Some digital illustrations drawn on my tablet using Sketchbook",
       "name": "illustration",
       "type": ["art"],
       "key": 10
