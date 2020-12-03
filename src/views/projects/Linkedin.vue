@@ -31,11 +31,8 @@
 
     <TextBlock
       title="Process"
-      text="Comments are composed of a variety of components such as avatars, job descriptions, likes and much more. The most important data that this webscraper aims to capture is the content of each comment. The scraper searches for the following CSS selector when capturing content.
-
-"
+      text="Comments are composed of a variety of components such as avatars, job descriptions, likes and much more. The most important data that this webscraper aims to capture is the content of each comment. The scraper searches for the following CSS selector when capturing content."
     />
-    <ImageBlock name="Linkedin/Linkedin.gif" />
 
     <Product
       title="Working with CSS"
@@ -52,6 +49,7 @@
         </p>
       </template>
     </Product>
+    <ImageBlock name="Linkedin/Linkedin.gif" />
   </div>
 </template>
 

@@ -45,15 +45,12 @@
           extension to have an animated icon to increase interactivity and
           portray the Rabbit's emotions in real time. I also wanted users to
           have a mini-dashboard of their browsing habits shown upon opening the
-          popup.
+          popup. I experimented with different popup layouts and designs. The
+          design on the left features a more minimalistic interface, but I opted
+          with a more detailed interface shown on the right to avoid confusion.
         </p>
       </template>
     </Product>
-    <TextBlock
-      text="I experimented with different popup layouts and designs. The design on
-          the left features a more minimalistic interface, but I opted with a
-          more detailed interface shown on the right to avoid confusion."
-    />
     <ImageBlock name="Rabbit/process.png" />
   </div>
 </template>
@@ -68,7 +65,7 @@ import ImageBlock from "@/components/ImageBlock.vue";
 
 export default {
   name: "Rabbit",
-  components: { Hero, Inspiration, Stack, Product, TextBlock, ImageBlock },
+  components: { Hero, Inspiration, Stack, Product, ImageBlock },
   data: function() {
     return {
       stack: ["javascript", "html", "chrome"]

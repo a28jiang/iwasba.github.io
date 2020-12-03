@@ -18,7 +18,6 @@
           <button
             :style="$vuetify.breakpoint.smAndDown ? { fontSize: '100%' } : ''"
             class="routerLink px-2 clickable"
-            v-on:click="$router.push('resume')"
           >
             Resume
           </button>

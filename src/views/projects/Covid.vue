@@ -27,12 +27,13 @@
           JSON. Using the data from the api, I then used ChartJS to render
           graphs. This project increased my knowledge in javascript and helped
           me discover a wonderful API.
-          <br /><br />To learn more about covid19-api, <a>click here</a>
+          <br /><br />To learn more about covid19-api,
+          <a href="https://covid19api.com/">click here</a>
         </p>
       </template>
     </Stack>
 
-    <Product :designVar="[1]" :imgSize="420" name="Covid">
+    <Product title="App Design" :designVar="[1]" :imgSize="420" name="Covid">
       <template v-slot:description>
         <p class="mt-6">
           I took inspiration from stock market charts and indicators. When

@@ -35,7 +35,8 @@ export default {
     icons: [
       { name: "mdi-facebook", link: "https://www.facebook.com/aaron.jiang.77" },
       { name: "mdi-linkedin", link: "https://www.linkedin.com/in/jiangaaron/" },
-      { name: "mdi-instagram", link: "https://www.instagram.com/aaronjiang0/" }
+      { name: "mdi-instagram", link: "https://www.instagram.com/aaronjiang0/" },
+      { name: "mdi-github", link: "https://www.github.com/iwasba/" }
     ]
   }),
   methods: {
