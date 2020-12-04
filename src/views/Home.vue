@@ -1,6 +1,13 @@
 <template>
   <div>
-    <v-row :style="{ height: '5vw' }" />
+    <v-row :style="{ height: '8vw', position: 'relative' }">
+      <v-img
+        v-if="!$vuetify.breakpoint.smAndDown"
+        class="lamp clickable"
+        max-width="3vw"
+        src="../assets/lampOn.svg"
+      />
+    </v-row>
     <v-row>
       <v-col
         cols="2"
@@ -79,7 +86,13 @@
     </v-row>
 
     <transition-group tag="div" name="list" class="row projects">
-      <v-col sm="12" md="6" class="top" v-for="item in items" :key="item.key">
+      <v-col
+        sm="12"
+        md="6"
+        class="top smoothTransition"
+        v-for="item in items"
+        :key="item.key"
+      >
         <ProjectCard v-bind="item" :key="item.key" />
       </v-col>
       <v-row
@@ -115,6 +128,7 @@ export default {
       activeDev: true,
       activeDesign: true,
       activeArt: false,
+      lampOn: false,
 
       allItems: Projects.projects,
       items: []
@@ -128,6 +142,9 @@ export default {
     this.items.sort((a, b) => (a.key > b.key ? 1 : -1));
   },
   methods: {
+    toggleLamp: function() {
+      this.lampOn = !this.lampOn;
+    },
     handleChange: function(type) {
       let isAdd;
       if (type === "dev") {
@@ -182,11 +199,20 @@ export default {
 .design1 {
   position: absolute;
   opacity: 0;
-  animation: fade-in-down 1s;
+  animation: fade-in-left 1s;
   animation-delay: 1s;
   animation-fill-mode: both;
   top: 4%;
   left: 8%;
+}
+.lamp {
+  position: absolute;
+  opacity: 0;
+  animation: fade-in-down 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  top: 100%;
+  left: 25%;
 }
 
 .semiCircle {

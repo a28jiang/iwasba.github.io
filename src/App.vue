@@ -2,7 +2,7 @@
   <v-app>
     <div id="app">
       <NavBar />
-      <transition name="component-fade" mode="out-in">
+      <transition name="fade" mode="out-in">
         <router-view :style="{ minHeight: '100vh' }" id="appContent" />
       </transition>
       <Footer />
@@ -51,6 +51,14 @@ export default {
   .clickable:hover {
     opacity: 0.5;
     cursor: pointer;
+  }
+  .clickable {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .smoothTransition {
+    transition: all 1s ease;
   }
 
   p {
@@ -120,12 +128,13 @@ a {
 }
 </style>
 <style>
-.component-fade-enter-active,
-.component-fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.8s ease;
 }
-.component-fade-enter,
-.component-fade-leave-to {
+
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 

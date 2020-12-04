@@ -5,7 +5,7 @@
       name="Financely"
       subtitle="Interactive Savings App"
       prototype="https://xd.adobe.com/view/23ce6bd8-95ba-4d32-8787-a35310a4674d-769d/"
-      title="QR Pay"
+      title="Financely"
       :designVar="[3, 4]"
     />
     <Inspiration

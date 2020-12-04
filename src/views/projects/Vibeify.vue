@@ -9,7 +9,13 @@
       title="Vibeify"
       :designVar="[1]"
     />
-    <Inspiration name="Vibeify" :designVar="[1, 2]" :imgSize="350" :offSetX="7">
+    <Inspiration
+      name="Vibeify"
+      :designVar="[1, 2]"
+      :imgSize="300"
+      :offSetX="7"
+      :forceY="20"
+    >
       <template v-slot:description>
         <p class="mt-6">
           Music preference varies from individual to individual, but can also

@@ -52,7 +52,7 @@
       <v-img
         :style="
           $vuetify.breakpoint.smAndDown
-            ? ''
+            ? [forceY ? { marginTop: `${forceY}vw` } : '']
             : [
                 offSetY ? { marginTop: `${offSetY}vw` } : { marginTop: '' },
                 offSetX ? { marginLeft: `${offSetX}vw` } : { marginLeft: '' }
@@ -75,7 +75,8 @@ export default {
     designVar: Array,
     imgSize: Number,
     offSetX: Number,
-    offSetY: Number
+    offSetY: Number,
+    forceY: Number
   }
 };
 </script>
