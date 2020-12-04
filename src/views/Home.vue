@@ -17,7 +17,7 @@
         <v-img class="design1" width="10vw" src="../assets/design1.svg" />
       </v-col>
 
-      <v-col class="centered" md="5" sm="12">
+      <v-col class="centered slowFade" md="5" sm="12">
         <v-img
           :max-width="$vuetify.breakpoint.smAndDown ? '55vw' : '32vw'"
           src="../assets/hero.svg"
@@ -26,7 +26,7 @@
       <v-col
         md="4"
         sm="12"
-        class="left"
+        class="left slowFade"
         :style="{ paddingLeft: 0 }"
         :order="$vuetify.breakpoint.smAndDown ? 'first' : ''"
       >
@@ -58,7 +58,7 @@
     </v-row>
 
     <v-row
-      class="sectionPadding"
+      class="sectionPadding fadeIn"
       :justify="$vuetify.breakpoint.smAndDown ? 'center' : 'end'"
       :style="$vuetify.breakpoint.smAndDown ? '' : { paddingRight: '12vw' }"
     >
@@ -96,6 +96,7 @@
         <ProjectCard v-bind="item" :key="item.key" />
       </v-col>
       <v-row
+        class="fadeIn"
         :style="{ minHeight: '500px' }"
         v-if="!activeDev && !activeDesign && !activeArt"
         key="alt"

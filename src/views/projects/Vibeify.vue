@@ -51,6 +51,12 @@
           detected through Tensorflow's recognition."
     />
     <ImageBlock name="Vibeify/vibeify.gif" />
+    <v-row class="centered pa-12 clickable" @click="$router.push('/')">
+      <h4>Return Home</h4>
+      <v-icon :style="{ color: '#6c86a1', paddingLeft: '16px' }" large>
+        mdi-exit-to-app
+      </v-icon>
+    </v-row>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <v-row class="pa-12">
+  <v-row class="pa-12 fadeIn">
     <v-col class="hidden-sm-and-down" cols="1" />
     <v-col
       :class="{ fillWidth: $vuetify.breakpoint.smAndDown }"

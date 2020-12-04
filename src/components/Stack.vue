@@ -1,7 +1,7 @@
 <template>
-  <v-row class="stack px-12">
-    <v-col class="hidden-sm-and-down" cols="1" />
-    <v-col :class="{ fillWidth: $vuetify.breakpoint.smAndDown }">
+  <v-row class="stack px-12 ">
+    <v-col class="hidden-sm-and-down " cols="1" />
+    <v-col class="fadeIn" :class="{ fillWidth: $vuetify.breakpoint.smAndDown }">
       <div class="leftAlign">
         <h2 :style="{ color: 'white' }">Tech Stack</h2>
         <slot name="description"></slot>

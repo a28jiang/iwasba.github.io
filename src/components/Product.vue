@@ -1,5 +1,5 @@
 <template>
-  <v-row :style="{ paddingTop: '30px' }" class="product pa-6">
+  <v-row :style="{ paddingTop: '30px' }" class="product pa-6 fadeIn">
     <v-col
       class="hidden-sm-and-down"
       cols="1"

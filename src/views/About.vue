@@ -11,7 +11,7 @@
       </v-col>
 
       <v-col
-        class="px-12"
+        class="px-12 fadeIn"
         :class="{ fillWidth: $vuetify.breakpoint.smAndDown }"
         md="4"
         sm="12"
@@ -20,24 +20,25 @@
           class="leftAlign"
           :style="$vuetify.breakpoint.smAndDown ? { fontSize: '10vw' } : ''"
         >
-          Hey I'm <span class="titleAccent"> Aaron</span>
+          Hey I'm <span class="titleAccent"> Aaron!</span>
         </h2>
         <h3
           :style="$vuetify.breakpoint.smAndDown ? { fontSize: '24px' } : ''"
           class="leftAlign pt-2"
         >
-          <b>Systems Design</b> Engineering at the
-          <b>University of Waterloo</b>
+          <b>Systems Design Engineering</b> at the University of Waterloo
         </h3>
         <p class="leftAlign pt-8">
-          I don't think so. xs-and-down would imply there is another breakpoint
-          that it overlaps, which is not the case. I think with improved
-          documentation this would be more clear.
+          Passionate about code with an eye for design, I love developing apps
+          that provide a seamless user experience. Over the last few months,
+          I've been actively working on various passion projects such as
+          <b>Covid-19 Tracker</b> and <b>Rabbit</b>. When it comes to problem
+          solving, I love combining design and development so that I can find
+          fresh, innovative ways to tackle problem spaces.
         </p>
         <p class="leftAlign pt-5">
-          I don't think so. xs-and-down would imply there is another breakpoint
-          that it overlaps, which is not the case. I think with improved
-          documentation this would be more clear.
+          When I'm taking a break, you can probably find me taking pictures,
+          doodling on my tablet or playing basketball with friends.
         </p>
       </v-col>
 

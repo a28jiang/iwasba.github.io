@@ -71,6 +71,12 @@
         </v-col>
       </v-row>
     </div>
+    <v-row class="centered pa-12 clickable" @click="$router.push('/')">
+      <h4>Return Home</h4>
+      <v-icon :style="{ color: '#6c86a1', paddingLeft: '16px' }" large>
+        mdi-exit-to-app
+      </v-icon>
+    </v-row>
   </div>
 </template>
 
@@ -99,12 +105,6 @@ export default {
   top: 3vw;
 }
 
-.fadeLeft {
-  opacity: 0;
-  animation: fade-in-left 1.5s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
-}
 .colHeight {
   max-height: 650px;
 }

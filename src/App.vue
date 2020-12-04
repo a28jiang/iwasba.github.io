@@ -146,6 +146,14 @@ a {
     opacity: 1;
   }
 }
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 @keyframes fade-in-down {
   0% {
@@ -179,14 +187,39 @@ a {
     transform: translateX(0);
   }
 }
+.fadeLeft {
+  opacity: 0;
+  animation: fade-in-left 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+.fadeDown {
+  opacity: 0;
+  animation: fade-in-down 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
 
-.list-enter-active,
-.list-leave-active {
+.fadeIn {
+  opacity: 0;
+  animation: fade-in 1.5s;
+  animation-fill-mode: both;
+}
+.slowFade {
+  opacity: 0;
+  animation: fade-in 2s;
+  animation-fill-mode: both;
+}
+
+.list-item {
   transition: all 1s;
 }
 .list-enter,
 .list-leave-to {
   opacity: 0;
   transform: translateY(30px);
+}
+.list-leave-active {
+  position: absolute;
 }
 </style>

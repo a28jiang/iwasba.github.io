@@ -1,5 +1,5 @@
 <template>
-  <v-row class="px-12">
+  <v-row class="px-12 fadeIn">
     <v-col class="hidden-sm-and-down" cols="1" />
     <v-col>
       <h2 class="mt-10" v-if="title" :style="{ textAlign: 'left' }">

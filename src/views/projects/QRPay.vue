@@ -52,6 +52,12 @@
       text="In order to analyze various use-cases, I designed two flows (pre-pay and post-pay) for QR-Pay. Pre-pay grants a seamless payment experience whereas post-pay provides more business-customer interaction."
     />
     <ImageBlock name="QRPay/flows.png" />
+    <v-row class="centered pa-12 clickable" @click="$router.push('/')">
+      <h4>Return Home</h4>
+      <v-icon :style="{ color: '#6c86a1', paddingLeft: '16px' }" large>
+        mdi-exit-to-app
+      </v-icon>
+    </v-row>
   </div>
 </template>
 
