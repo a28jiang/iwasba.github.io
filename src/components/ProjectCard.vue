@@ -9,8 +9,8 @@
       :src="require(`@/assets/thumbnail/${name}.png`)"
     ></v-img>
 
-    <v-row :style="{ maxHeight: '200px' }">
-      <v-col class="centerV hidden-xs-only" cols="1">
+    <v-row v-if="$vuetify.breakpoint.smAndUp" :style="{ maxHeight: '200px' }">
+      <v-col class="pt-8" cols="1">
         <div v-if="type.includes('dev')" class="devBadge" />
         <div v-if="type.includes('design')" class="designBadge" />
         <div v-if="type.includes('art')" class="artBadge" />
@@ -24,6 +24,21 @@
         </v-card-subtitle>
       </v-col>
       <v-col cols="7">
+        <v-card-text>{{ description }}</v-card-text>
+      </v-col>
+    </v-row>
+    <v-row v-else :style="{ maxHeight: '200px' }">
+      <v-col>
+        <v-card-title class="left clickable" @click="$router.push(name)">
+          {{ title }}
+          <div class="pl-2" />
+          <div v-if="type.includes('dev')" class="devBadge" />
+          <div v-if="type.includes('design')" class="designBadge" />
+          <div v-if="type.includes('art')" class="artBadge" />
+        </v-card-title>
+        <v-card-subtitle class="pb-2">
+          {{ stack.join(", ") }}
+        </v-card-subtitle>
         <v-card-text>{{ description }}</v-card-text>
       </v-col>
     </v-row>
@@ -139,21 +154,21 @@ export default {
     height: 12px;
     width: 12px;
     background-color: #6c86a1;
-    margin: 8px 8px 12px 16px;
+    margin: 9px 6px 0px 6px;
     border-radius: 50%;
   }
   .designBadge {
     height: 12px;
     width: 12px;
     background-color: #eba0a0;
-    margin: 8px 8px 12px 16px;
+    margin: 9px 6px 0px 6px;
     border-radius: 50%;
   }
   .artBadge {
     height: 12px;
     width: 12px;
     background-color: #88d3c8;
-    margin: 8px 8px 12px 16px;
+    margin: 9px 6px 0px 6px;
     border-radius: 50%;
   }
 }

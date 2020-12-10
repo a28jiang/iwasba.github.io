@@ -1,13 +1,6 @@
 <template>
   <div>
-    <v-row :style="{ height: '8vw', position: 'relative' }">
-      <v-img
-        v-if="!$vuetify.breakpoint.smAndDown"
-        class="lamp clickable"
-        max-width="3vw"
-        src="../assets/lampOn.svg"
-      />
-    </v-row>
+    <v-row :style="{ height: '8vw', position: 'relative' }"> </v-row>
     <v-row>
       <v-col
         cols="2"
@@ -20,7 +13,7 @@
       <v-col class="centered slowFade" md="5" sm="12">
         <v-img
           :max-width="$vuetify.breakpoint.smAndDown ? '55vw' : '32vw'"
-          src="../assets/hero.svg"
+          src="../assets/animation_full.svg"
         />
       </v-col>
       <v-col
