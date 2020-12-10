@@ -124,11 +124,6 @@ export default {
   margin-top: 60px;
 }
 
-.icon {
-  color: #6c86a1;
-  padding-left: 16px;
-}
-
 .leftAlign {
   text-align: left;
 }
@@ -179,7 +174,7 @@ export default {
   animation-delay: 1s;
   animation-fill-mode: both;
   position: absolute;
-  top: 80px;
+  top: 100px;
   left: 12%;
   z-index: 0;
 }

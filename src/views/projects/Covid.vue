@@ -33,7 +33,7 @@
       </template>
     </Stack>
 
-    <Product title="App Design" :designVar="[1]" :imgSize="420" name="Covid">
+    <Product title="App Design" :designVar="[1]" :imgSize="400" name="Covid">
       <template v-slot:description>
         <p class="mt-6">
           I took inspiration from stock market charts and indicators. When
@@ -45,7 +45,7 @@
     </Product>
     <v-row class="centered pa-12 clickable" @click="$router.push('/')">
       <h4>Return Home</h4>
-      <v-icon :style="{ color: '#6c86a1', paddingLeft: '16px' }" large>
+      <v-icon class="icon" large>
         mdi-exit-to-app
       </v-icon>
     </v-row>

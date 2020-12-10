@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row :style="{ height: '8vw', position: 'relative' }"> </v-row>
+    <v-row :style="{ height: '8vw' }"> </v-row>
     <v-row>
       <v-col
         cols="2"
@@ -196,7 +196,7 @@ export default {
   animation: fade-in-left 1s;
   animation-delay: 1s;
   animation-fill-mode: both;
-  top: 4%;
+  top: 5%;
   left: 8%;
 }
 .lamp {

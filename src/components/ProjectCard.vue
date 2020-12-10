@@ -31,7 +31,7 @@
       <v-col>
         <v-card-title class="left clickable" @click="$router.push(name)">
           {{ title }}
-          <div class="pl-2" />
+          <div class="pl-" />
           <div v-if="type.includes('dev')" class="devBadge" />
           <div v-if="type.includes('design')" class="designBadge" />
           <div v-if="type.includes('art')" class="artBadge" />
@@ -80,7 +80,6 @@ export default {
     word-break: inherit !important;
     word-wrap: normal;
     font-weight: 600;
-    color: #4a4a4a;
     font-size: 26px;
     text-align: left;
     padding-left: 0;
@@ -99,7 +98,6 @@ export default {
     align-items: flex-start;
     text-align: left;
     font-size: 16px;
-    color: gray;
     padding-left: 0;
     padding-right: 0;
   }
@@ -131,7 +129,6 @@ export default {
     word-break: inherit !important;
     word-wrap: normal;
     font-weight: 600;
-    color: #4a4a4a;
     text-align: left;
     padding-left: 0;
     padding-right: 0;

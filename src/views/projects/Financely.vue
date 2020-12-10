@@ -10,7 +10,7 @@
     />
     <Inspiration
       name="Financely"
-      :designVar="[2, 3]"
+      :designVar="[2]"
       :offSetX="10"
       :offSetY="-2"
       :imgSize="400"
@@ -55,9 +55,10 @@
       </template>
     </Product>
     <ImageBlock name="Financely/flows.png" />
+    <ImageBlock name="Financely/financely-design.png" />
     <v-row class="centered pa-12 clickable" @click="$router.push('/')">
       <h4>Return Home</h4>
-      <v-icon :style="{ color: '#6c86a1', paddingLeft: '16px' }" large>
+      <v-icon class="icon" large>
         mdi-exit-to-app
       </v-icon>
     </v-row>

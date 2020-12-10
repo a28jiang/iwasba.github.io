@@ -49,7 +49,7 @@
     </Product>
     <v-row class="centered pa-12 clickable" @click="$router.push('/')">
       <h4>Return Home</h4>
-      <v-icon :style="{ color: '#6c86a1', paddingLeft: '16px' }" large>
+      <v-icon class="icon" large>
         mdi-exit-to-app
       </v-icon>
     </v-row>

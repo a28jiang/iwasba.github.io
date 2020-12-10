@@ -1,9 +1,16 @@
 <template>
-  <v-row class="stack px-12 ">
+  <v-row
+    class="stack px-12 "
+    :style="
+      $vuetify.theme.dark
+        ? { backgroundColor: '#596B7D ' }
+        : { backgroundColor: '#6c86a1' }
+    "
+  >
     <v-col class="hidden-sm-and-down " cols="1" />
     <v-col class="fadeIn" :class="{ fillWidth: $vuetify.breakpoint.smAndDown }">
       <div class="leftAlign">
-        <h2 :style="{ color: 'white' }">Tech Stack</h2>
+        <h2 :style="{ color: 'white !important' }">Tech Stack</h2>
         <slot name="description"></slot>
       </div>
     </v-col>
@@ -55,7 +62,6 @@ export default {
 .stack {
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: #6c86a1;
 }
 .leftAlign {
   text-align: left;

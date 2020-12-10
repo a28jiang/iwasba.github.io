@@ -20,6 +20,24 @@ export default {
 </script>
 
 <style lang="scss">
+.v-card__text {
+  color: var(--v-tertiary-base) !important;
+}
+.theme--dark.v-card {
+  background-color: var(--v-background-base) !important;
+  color: var(--v-secondary-base) !important;
+}
+.theme--light.v-card {
+  background-color: var(--v-background-base) !important;
+  color: var(--v-secondary-base) !important;
+}
+.theme--dark.v-application {
+  background-color: var(--v-background-base) !important;
+}
+.theme--light.v-application {
+  background-color: var(--v-background-base) !important;
+}
+
 #app {
   font-family: Roboto;
   -webkit-font-smoothing: antialiased;
@@ -28,13 +46,13 @@ export default {
 
   h1 {
     font-weight: bold;
-    color: #3f3f3f;
+    color: var(--v-primary-base) !important;
     margin: 16px;
     font-size: 5vw;
   }
   h2 {
     font-weight: bold;
-    color: #3f3f3f;
+    color: var(--v-primary-base) !important;
     font-size: 48px;
   }
   h3 {
@@ -44,7 +62,7 @@ export default {
   }
   h4 {
     font-weight: 600;
-    color: #6c86a1;
+    color: var(--v-accent-base) !important;
     font-size: 30px;
   }
 
@@ -66,6 +84,10 @@ export default {
     line-height: 26px;
     color: #c4c4c4;
     font-size: 20px;
+  }
+  .icon {
+    color: var(--v-accent-base) !important;
+    padding-left: 16px;
   }
 }
 

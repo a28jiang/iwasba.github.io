@@ -3,7 +3,11 @@
     <v-footer class="center" dark padless>
       <v-row
         class="py-6"
-        :style="{ width: '100%', backgroundColor: '#6C86A1' }"
+        :style="
+          $vuetify.theme.dark
+            ? { width: '100%', backgroundColor: '#596B7D ' }
+            : { width: '100%', backgroundColor: '#6c86a1' }
+        "
       >
         <v-col cols="12" class="centered px-0">
           {{ new Date().getFullYear() }} —
