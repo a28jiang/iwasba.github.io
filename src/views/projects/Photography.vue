@@ -1,6 +1,12 @@
 <template>
   <div>
-    <v-row :style="{ height: '5vw', position: relative }">
+    <v-row
+      :style="
+        $vuetify.breakpoint.smAndDown
+          ? { height: '12vw', position: relative }
+          : { height: '5vw', position: relative }
+      "
+    >
       <v-img
         v-if="$vuetify.breakpoint.mdAndUp"
         class="design1"

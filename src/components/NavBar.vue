@@ -5,8 +5,8 @@
         class="left"
         :style="
           $vuetify.breakpoint.smAndDown
-            ? { paddingLeft: '48px' }
-            : { paddingLeft: '12%' }
+            ? { paddingLeft: '36px' }
+            : { paddingLeft: '10%' }
         "
         md="3"
         sm="12"

@@ -1,5 +1,12 @@
 <template>
-  <v-row class="px-12 padTop fadeIn">
+  <v-row
+    class="px-12 fadeIn"
+    :style="
+      $vuetify.breakpoint.smAndDown
+        ? { paddingTop: '90px' }
+        : { paddingTop: '60px' }
+    "
+  >
     <v-col class="hidden-sm-and-down" cols="1" />
     <v-col class="centered" sm="12" md="6">
       <v-img
@@ -121,7 +128,7 @@ export default {
 
 <style scoped>
 .padTop {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .leftAlign {
