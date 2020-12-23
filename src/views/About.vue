@@ -29,7 +29,7 @@
           <b>Systems Design Engineering</b> at the University of Waterloo
         </h3>
         <p class="leftAlign pt-8">
-          Passionate about code with an eye for design, I love developing apps
+          Passionate for coding with an eye for design, I love developing apps
           that provide a seamless user experience. Over the last few months,
           I've been actively working on various passion projects such as
           <b>Covid-19 Tracker</b> and <b>Rabbit</b>. When it comes to problem

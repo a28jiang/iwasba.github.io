@@ -21,7 +21,7 @@
           "
           src="../assets/logo.png"
         />
-        <a href="Nov_2020_Resume.pdf" target="_blank">
+        <a href="Aaron_Jiang_2021.pdf" target="_blank">
           <button
             :style="$vuetify.breakpoint.smAndDown ? { fontSize: '100%' } : ''"
             class="routerLink px-md-8 px-4 clickable"
