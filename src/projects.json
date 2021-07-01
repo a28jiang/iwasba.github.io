@@ -1,84 +1,84 @@
 {
-  "projects": [
-    {
-      "title": "Watchlist",
-      "stack": ["Figma"],
-      "description": "A stylistic app designed to help keep track of upcoming shows and movies in an intuitive manner",
-      "name": "watchlist",
-      "type": ["dev", "design"],
-      "key": 9
-    },
-    {
-      "title": "Photography",
-      "stack": ["Canon T3i", "Lightroom"],
-      "description": "Photography and editing highlights from my travels and adventures with friends.",
-      "name": "photography",
-      "type": ["art"],
-      "key": 0
-    },
-    {
-      "title": "Illustration",
-      "stack": ["Sketchbook"],
-      "description": "Some digital illustrations drawn on my tablet using Sketchbook",
-      "name": "illustration",
-      "type": ["art"],
-      "key": 1
-    },
-    {
-      "title": "Rabbit",
-      "stack": ["Figma", "Chrome-API", "Javascript"],
-      "description": "An interactive Google Chrome extension that keeps you motivated and on track. Rabbit leverages the Chrome tabs and storage APIs to effectively analyze browsing habits.",
-      "name": "rabbit",
-      "type": ["dev", "design"],
-      "key": 2
-    },
-    {
-      "title": "Covid-19 Tracker",
-      "stack": ["VueJS", "Figma", "Covid19API"],
-      "description": "A visually striking web-app that provides key insight towards transmission rates as well as statistics such as deaths and recoveries.",
-      "name": "covid",
-      "type": ["dev", "design"],
-      "key": 3
-    },
-    {
-      "title": "Vibeify",
-      "stack": ["React", "Tensorflow"],
-      "description": "An intelligent DJ using Tensorflow to analyze dance movements and play songs from your favourite Spotify playlists accordingly.",
-      "name": "vibeify",
-      "type": ["dev"],
-      "key": 4
-    },
-    {
-      "title": "LinkedIn Scraper ",
-      "stack": ["VueJS", "NodeJS"],
-      "description": "An application to help corporations analyze crowd sentiment and business opportunities using Linkedin commenting data.",
-      "name": "linkedin",
-      "type": ["dev"],
-      "key": 5
-    },
-    {
-      "title": "QR-Pay",
-      "stack": ["Adobe XD"],
-      "name": "qrpay",
-      "description": "An innovative solution for fast and accessible payments inspired by QR and geo-fencing technology.",
-      "type": ["design"],
-      "key": 6
-    },
-    {
-      "title": "Financely",
-      "stack": ["Adobe XD"],
-      "description": "An app designed to promote savings and financially responsible decisions amongst younger audiences.",
-      "name": "financely",
-      "type": ["design"],
-      "key": 7
-    },
-    {
-      "title": "Hotpot Tracker",
-      "stack": ["Figma"],
-      "description": "A playful app that can help hotpot enthusiasts increase their efficiency.",
-      "name": "hotpot",
-      "type": ["design"],
-      "key": 8
-    }
-  ]
+    "projects": [
+        {
+            "title": "Watchlist",
+            "stack": ["Firebase", "React", "Figma"],
+            "description": "A PWA designed to help users keep track of upcoming shows, set reminders and share lists with friends.",
+            "name": "watchlist",
+            "type": ["dev", "design"],
+            "key": -1
+        },
+        {
+            "title": "Photography",
+            "stack": ["Canon T3i", "Lightroom"],
+            "description": "Photography and editing highlights from my travels and adventures with friends.",
+            "name": "photography",
+            "type": ["art"],
+            "key": 0
+        },
+        {
+            "title": "Illustration",
+            "stack": ["Sketchbook"],
+            "description": "Some digital illustrations drawn on my tablet using Sketchbook.",
+            "name": "illustration",
+            "type": ["art"],
+            "key": 1
+        },
+        {
+            "title": "Rabbit",
+            "stack": ["Figma", "Chrome-API", "Javascript"],
+            "description": "An interactive Google Chrome extension that keeps you motivated and on track. Rabbit leverages the Chrome tabs and storage APIs to effectively analyze browsing habits.",
+            "name": "rabbit",
+            "type": ["dev", "design"],
+            "key": 2
+        },
+        {
+            "title": "Covid-19 Tracker",
+            "stack": ["VueJS", "Figma", "Covid19API"],
+            "description": "A visually striking web-app that provides key insight towards transmission rates as well as statistics such as deaths and recoveries.",
+            "name": "covid",
+            "type": ["dev", "design"],
+            "key": 3
+        },
+        {
+            "title": "Vibeify",
+            "stack": ["React", "Tensorflow"],
+            "description": "An intelligent DJ using Tensorflow to analyze dance movements and play songs from your favourite Spotify playlists accordingly.",
+            "name": "vibeify",
+            "type": ["dev"],
+            "key": 4
+        },
+        {
+            "title": "LinkedIn Scraper ",
+            "stack": ["VueJS", "NodeJS"],
+            "description": "An application to help corporations analyze crowd sentiment and business opportunities using Linkedin commenting data.",
+            "name": "linkedin",
+            "type": ["dev"],
+            "key": 5
+        },
+        {
+            "title": "QR-Pay",
+            "stack": ["Adobe XD"],
+            "name": "qrpay",
+            "description": "An innovative solution for fast and accessible payments inspired by QR and geo-fencing technology.",
+            "type": ["design"],
+            "key": 6
+        },
+        {
+            "title": "Financely",
+            "stack": ["Adobe XD"],
+            "description": "An app designed to promote savings and financially responsible decisions amongst younger audiences.",
+            "name": "financely",
+            "type": ["design"],
+            "key": 7
+        },
+        {
+            "title": "Hotpot Tracker",
+            "stack": ["Figma"],
+            "description": "A playful app that can help hotpot enthusiasts increase their efficiency.",
+            "name": "hotpot",
+            "type": ["design"],
+            "key": 8
+        }
+    ]
 }

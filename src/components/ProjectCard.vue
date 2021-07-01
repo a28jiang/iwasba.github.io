@@ -111,7 +111,7 @@ export default {
   .designBadge {
     height: 16px;
     width: 16px;
-    background-color: #eba0a0;
+    background-color: #d07b7b;
     margin: 8px 8px 12px 16px;
     border-radius: 50%;
   }
@@ -157,7 +157,7 @@ export default {
   .designBadge {
     height: 12px;
     width: 12px;
-    background-color: #eba0a0;
+    background-color: #d07b7b;
     margin: 9px 6px 0px 6px;
     border-radius: 50%;
   }
