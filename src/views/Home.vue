@@ -136,7 +136,7 @@ import { VueTyper } from 'vue-typer'
 export default {
     name: 'Home',
     components: { ProjectCard, VueTyper },
-    data: function () {
+    data: function() {
         return {
             selectedVals: [],
             activeDev: true,
@@ -156,10 +156,10 @@ export default {
         this.items.sort((a, b) => (a.key > b.key ? 1 : -1))
     },
     methods: {
-        toggleLamp: function () {
+        toggleLamp: function() {
             this.lampOn = !this.lampOn
         },
-        handleChange: function (type) {
+        handleChange: function(type) {
             let isAdd
             if (type === 'dev') {
                 this.activeDev = !this.activeDev
@@ -179,13 +179,13 @@ export default {
             this.items.sort((a, b) => (a.key > b.key ? 1 : -1))
         },
 
-        addItems: function (type) {
-            this.allItems.forEach((item) => {
+        addItems: function(type) {
+            this.allItems.forEach(item => {
                 if (item.type.includes(type) && !this.items.includes(item))
                     this.items.push(item)
             })
         },
-        removeItems: function (type) {
+        removeItems: function(type) {
             for (var i = this.items.length - 1; i >= 0; i--) {
                 const types = this.items[i].type
 
@@ -203,7 +203,7 @@ export default {
 
 <style scoped>
 .typerContainer {
-    min-height: 42px;
+    min-height: 50px;
 }
 .projects {
     padding: 0 12vw 0 12vw;

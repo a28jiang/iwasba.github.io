@@ -75,6 +75,16 @@ export default {
             else el.style.backgroundColor = '#FFFFFF'
         },
     },
+    mounted: function() {
+        if (
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+        ) {
+            this.$vuetify.theme.dark = true
+            var el = document.querySelector('.appBody')
+            el.style.backgroundColor = '#323c46'
+        }
+    },
 }
 </script>
 
