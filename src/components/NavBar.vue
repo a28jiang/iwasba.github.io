@@ -21,7 +21,7 @@
                     "
                     src="../assets/logo.png"
                 />
-                <a href="Aaron_Jiang_July_Resume.pdf" target="_blank">
+                <a href="Aaron_Jiang_Resume.pdf" target="_blank">
                     <button
                         :style="
                             $vuetify.breakpoint.smAndDown
